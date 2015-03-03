@@ -1,0 +1,92 @@
+/* 
+Colour Pallette
+Blue  -> #318CE7
+Green -> #3EB489
+Pink  -> #FF007f
+Main  -> #36454F
+*/
+
+
+
+
+/* IMG SRC CSS */
+img 
+{
+    margin-bottom: 25px;
+}
+/* ---------- */
+
+
+
+
+/* Text CSS */
+p, h1, h2, h3, h4, h5, h6, a
+{
+    font-family: 'Lato', sans-serif;
+}
+
+p
+{
+    color: #36454F;
+}
+
+h2, h3
+{
+    color: #FF007f;
+}
+
+a 
+{
+    text-decoration: none;
+    color: #FF007f;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+a:hover
+{
+    color: #3EB489;
+}
+
+.greetings
+{
+    color: #3EB489;
+}
+/* ---------- */
+
+
+
+
+/* Table CSS */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: #505050;
+    color: white;
+}
+/* ---------- */
+
+
+
+
+/* Misc. CSS Codes */
+.toolbar
+{
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* ---------- */
