@@ -20,7 +20,7 @@ class ShopTableGateway {
         $status = $statement->execute();
         
         if (!$status) {
-            die("Could not retrieve users");
+            die("Could not retrieve shops");
         }
         
         return $statement;
@@ -42,7 +42,7 @@ class ShopTableGateway {
         $status = $statement->execute($params);
         
         if (!$status) {
-            die("Could not retrieve user");
+            die("Could not retrieve shop");
         }
         
         return $statement;
@@ -132,7 +132,7 @@ class ShopTableGateway {
         
         if(!$status)
         {
-            die("Could not update Shop");
+            die("Could not update shop");
         }
 
         return ($statement->rowCount() == 1);
