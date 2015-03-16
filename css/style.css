@@ -925,6 +925,11 @@ select
 
 .form-control
 {
+    margin-bottom: 0px;
+}
+
+.loginregister-form
+{
     margin-bottom: 10px;
 }
 

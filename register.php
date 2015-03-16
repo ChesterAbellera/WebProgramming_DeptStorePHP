@@ -87,7 +87,7 @@
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>                                                     
                     <div class="row">
                         <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
-                            <input class="form-control"
+                            <input class="form-control loginregister-form"
                                    type="text" 
                                    name="username"
                                    id="exampleInputEmail3"
@@ -111,7 +111,7 @@
 
 
 
-                            <input class="form-control"
+                            <input class="form-control loginregister-form"
                                    type="password" 
                                    name="password" 
                                    id="exampleInputEmail3" 
@@ -125,7 +125,7 @@
                                 ?>
                             </span>
 
-                            <input class="form-control"
+                            <input class="form-control loginregister-form"
                                    type="password" 
                                    name="password2" 
                                    id="exampleInputEmail3" 

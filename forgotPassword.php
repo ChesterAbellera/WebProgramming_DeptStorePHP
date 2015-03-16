@@ -89,7 +89,7 @@
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
 
                     <input type="email" 
-                           class="form-control" 
+                           class="form-control loginregister-form" 
                            id="exampleInputEmail3" 
                            placeholder="Email"name="emailaddress" 
                            value="" />
