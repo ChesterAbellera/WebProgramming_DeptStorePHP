@@ -1,63 +1,3 @@
-/* 
-Colour Pallette
-Blue  -> #318CE7
-Green -> #3EB489
-Pink  -> #FF007f
-Main  -> #36454F
-*/
-
-
-
-
-/* IMG SRC CSS */
-img 
-{
-    margin-bottom: 25px;
-}
-/* ---------- */
-
-
-
-
-/* Text CSS */
-p, h1, h2, h3, h4, h5, h6, a
-{
-    font-family: 'Lato', sans-serif;
-}
-
-p
-{
-    color: #36454F;
-}
-
-h2, h3
-{
-    color: #FF007f;
-}
-
-a 
-{
-    text-decoration: none;
-    color: #FF007f;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-a:hover
-{
-    color: #3EB489;
-}
-
-.greetings
-{
-    color: #3EB489;
-}
-/* ---------- */
-
-
-
-
 /* Table CSS */
 table, th, td {
     border: 1px solid black;
@@ -90,3 +30,979 @@ table#t01 th	{
     margin-bottom: 10px;
 }
 /* ---------- */
+
+
+
+
+/*
+Stock Fonts:
+
+		font-family: 'Josefin Sans', sans-serif;
+		font-family: 'Reenie Beanie', cursive;
+		font-family: 'La Belle Aurore', cursive;
+		font-family: 'Amatic SC', cursive;
+
+
+
+
+Colour Palette:
+
+		Light Blue : #63D1F4;
+		Light BlueGreen : #99CDC9;
+		Dark BlueGreen : #20BF9F;
+		Salmon Pink : #F49594;
+		Medium Red : #EE3B3B;
+		Light Brown : #FFE4C4;
+		Light Grey : #E0E0E0;
+		Dark Grey : #5C5C5C;
+*/
+
+
+
+
+/* Text Style Codes */
+h1
+{
+	font-family: 'Reenie Beanie', cursive;
+}
+
+h3
+{
+    color: white;
+}
+
+p, h2, h3, h4, h5, h6, a
+{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+p
+{
+	font-size: 15px;
+	font-weight: normal;
+}
+
+a
+{
+	font-weight: normal;
+}
+
+a:hover
+{
+	text-decoration: none;
+	color: black;
+}
+/* -------------------- */
+
+
+
+
+body
+{
+	padding-top: 51px;
+}
+
+
+
+
+/* Logo */
+.navbar-header a
+{
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 35px;
+	color: black !important;
+}
+
+.navbar-header a:hover
+{
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 35px;
+	color: #F49594 !important;
+}
+
+.navbar
+{
+	border: none;
+	color: black;
+	background : white;
+	margin-bottom:0px;
+	padding-bottom: 0px;
+}
+
+.menu
+{
+	margin-top: 18px;
+}
+
+/* Menu */
+ul.nav a
+{ 
+	color: black !important;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 17px;
+}
+
+.navbar-inverse .navbar-nav>.open>a, 
+.navbar-inverse .navbar-nav>.open>a:hover, 
+.navbar-inverse .navbar-nav>.open>a:focus
+{
+	background-color: white;
+}
+
+ul.nav a:hover,
+ul.nav a:focus,
+ul.nav a:active
+{ 
+	color: #F49594 !important;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 17px;
+}
+
+
+
+
+/* Designs Dropdown */
+.dropdown-menu
+{
+	background-color : white;
+}
+
+.dropdown-menu > li > a
+{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	color: black !important;
+	background: white !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:active,
+.dropdown-menu > li > a:focus
+{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	color: white !important;
+	background: black !important;
+}
+
+
+
+
+/* Mobile Menu */
+.navbar-inverse .navbar-toggle
+{
+	background-color: #20BF9F !important;
+	border: none;
+
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:active,
+.navbar-inverse .navbar-toggle:focus
+{
+	background-color: #F49594 !important;
+	border: none;
+}
+
+
+
+
+/* Jumbotron */
+.jumbotron
+{
+	background-image: url(../images/jumbotronbanner.jpg);
+	background-repeat: no-repeat;
+	min-height: 570px;
+	margin-bottom: 0px;
+	/* background: #99CDC9; */
+}
+
+.jumbotron h1
+{
+	color: white;
+	margin-top: 205px;
+	margin-bottom: 20px;
+}
+/* -------------------- */
+
+
+
+
+.babytron
+{
+	/*background-image: url(../images/blurrybackgrounds/10.jpg);*/
+	background: black;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	padding-top: 1px;
+	padding-bottom: 15px;
+	color: white;
+}
+
+.departments
+{
+	margin-top: 20px;
+}
+
+.seasonal, 
+.popular, 
+.new
+{
+	margin-top: 0px;
+}
+
+.thumbnail
+{
+	/*background-color: #FCFCFC;*/
+	border-color: #E0E0E0;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.thumbnail p
+{
+	font-weight: bold;
+}
+
+.thumbnail a
+{
+	color: black;
+}
+
+.thumbnail a:hover
+{
+	color: #F49594;
+}
+
+.polaroid-grid-4
+{
+	padding: 10px;
+}
+
+.polaroid-grid-3
+{
+	padding: 5px;
+}
+
+strong
+{
+	color: #F49594;
+	font-size: 16px;
+}
+
+strong:hover
+{
+	color: #20BF9F;
+	font-size: 16px;
+}
+
+.vintage
+{
+	background-image: url(../images/vintage.jpg);
+	background-repeat: no-repeat;
+	min-height: 500px;
+	width: 100%;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.vintage h1
+{
+	font-size: 50px;
+	margin-top: 165px;
+	margin-bottom: 20px;
+}
+
+.photography
+{
+	background-image: url(../images/negatives.jpg);
+	background-repeat: no-repeat;
+	min-height: 730px;
+	width: 100%;
+	color: white;
+	margin-bottom: 13px;
+}
+
+.photography h1
+{
+	font-size: 50px;
+	margin-top: 270px;
+	margin-bottom: 20px;
+}
+
+.photographyitemviewsize
+{
+	height: 325px;
+	width: 325px;
+}
+
+.travelbackground
+{
+	background-image: url(../images/travel.jpg);
+	background-repeat: no-repeat;
+	min-height: 730px;
+	width: 100%;
+	color: white;
+	margin-bottom: 13px;
+}
+
+.travelbackground h1
+{
+	font-size: 50px;
+	margin-top: 270px;
+	margin-bottom: 20px;
+}
+
+.crew
+{
+	margin-top: 20px;
+	margin-top: 40px;
+}
+
+.crewicon
+{
+	height: 175px;
+	width: 175px;
+}
+
+.crewname
+{
+	color: #F49594;
+}
+
+.crewname:hover
+{
+	color: #20BF9F;
+}
+
+.meetthecrewheading
+{
+	margin-top: -5px;
+}
+
+.community
+{
+	background-image: url(../images/community.jpg);
+	background-repeat: no-repeat;
+	min-height: 629px;
+	margin-bottom: 0px;
+	width: 100%;
+	color: white;
+}
+
+.community h1
+{
+	font-size: 50px;
+	margin-top: 150px;
+}
+
+.community h2
+{
+	margin-bottom: 40px;
+}
+
+.jobsandcommunity
+{
+	background-color: transparent;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	color: white;
+}
+
+.sketches
+{
+	background-image: url(../images/sketches.jpg);
+	background-repeat: no-repeat;
+	min-height: 359px;
+	width: 100%;
+}
+
+.newsletter
+{
+	background: white;
+}
+
+.newslettercontent
+{
+	margin-top: 0px;
+	color: black;
+	background-color: transparent;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.newslettercontent p
+{
+	font-weight: bold;
+}
+
+.newslettercontent i
+{
+	margin: 0 5px;
+	color: black;
+}
+
+.newslettercontent i:hover
+{
+	color: #F49594;
+}
+
+footer
+{
+	margin-top: 50px;
+	background : black;
+	padding: 2em 0;
+	margin: 0;
+	text-align: center;
+	color: white;
+}
+
+.footercontent p
+{
+	font-weight: bold;
+}
+
+.footercontent a
+{
+	color: white;
+	font-weight: bold;
+}
+
+.footercontent a:hover
+{
+	color: #F49594;
+	font-weight: bold;
+}
+
+.footercontent h1
+{
+	margin-top : -10px;
+}
+/* -------------------- */
+
+
+
+
+/* Button Styling */
+.btn-info
+{
+	color: white;
+	background-color: rgba(0,0,0,0);
+	border: 2px solid white;
+	font-weight: normal;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  /*background-color: ;*/
+  color: white;
+  background-color: black;
+  border : 2px solid black;
+  font-weight: normal;
+}
+
+
+
+
+.btn-default
+{
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+	font-weight: normal;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  /*background-color: ;*/
+  color: white;
+  background-color: #F49594;
+  border: 1px solid #F49594;
+  font-weight: normal;
+}
+
+
+
+
+.btn-primary
+{
+	color: white;
+	background-color: #20BF9F;
+	border: 1px solid #20BF9F;
+	font-weight: normal;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #F49594;
+  border: 1px solid #F49594;
+  font-weight: normal;
+}
+
+
+
+
+.btn-newsletter
+{
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+	font-weight: normal;
+}
+
+.btn-newsletter:hover,
+.btn-newsletter:focus,
+.btn-newsletter:active,
+.btn-newsletter.active,
+.open .dropdown-toggle.btn-newsletter {
+  /*background-color: ;*/
+  color: white;
+  background-color: #F49594;
+  border: 1px solid #F49594;
+  font-weight: normal;
+}
+
+
+
+
+.btn-size
+{
+	color: black;
+	background-color: rgba(0,0,0,0);
+	border: 2px solid black;
+	font-weight: normal;
+}
+
+.btn-size:hover,
+.btn-size:focus,
+.btn-size:active,
+.btn-size.active,
+.open .dropdown-toggle.btn-size {
+  /*background-color: ;*/
+  color: white;
+  background-color: black;
+  border : 2px solid black;
+  font-weight: normal;
+}
+
+
+
+
+.btn-addtocart
+{
+	color: white;
+	background-color: black;
+  	border: none;
+	font-weight: normal;
+}
+
+.btn-addtocart:hover,
+.btn-addtocart:focus,
+.btn-addtocart:active,
+.btn-addtocart.active,
+.open .dropdown-toggle.btn-addtocart {
+  color: white;
+  background-color: #F49594;
+  border: none;
+  font-weight: normal;
+}
+
+
+
+
+.btn-login
+{
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+	font-weight: normal;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active,
+.btn-login.active,
+.open .dropdown-toggle.btn-login {
+  /*background-color: ;*/
+  color: white;
+  background-color: #F49594;
+  border: 1px solid #F49594;
+  font-weight: normal;
+}
+
+
+
+
+.btn-register
+{
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+	font-weight: normal;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  /*background-color: ;*/
+  color: white;
+  background-color: #F49594;
+  border: 1px solid #F49594;
+  font-weight: normal;
+}
+
+
+
+
+.btn-view
+{
+	color: white;
+	background-color: black;
+	font-weight: normal;
+}
+
+.btn-view:hover,
+.btn-view:focus,
+.btn-view:active,
+.btn-view.active,
+.open .dropdown-toggle.btn-view {
+  /*background-color: ;*/
+  color: black;
+  background-color: white;
+  font-weight: normal;
+}
+
+.btn-edit
+{
+	color: white;
+	background-color: #20BF9F;
+	font-weight: normal;
+}
+
+.btn-edit:hover,
+.btn-edit:focus,
+.btn-edit:active,
+.btn-edit.active,
+.open .dropdown-toggle.btn-edit {
+  /*background-color: ;*/
+  color: #20BF9F;
+  background-color: white;
+  font-weight: normal;
+}
+
+.btn-delete
+{
+	color: white;
+	background-color: #EE3B3B;
+	font-weight: normal;
+}
+
+.btn-delete:hover,
+.btn-delete:focus,
+.btn-delete:active,
+.btn-delete.active,
+.open .dropdown-toggle.btn-delete {
+  /*background-color: ;*/
+  color: #EE3B3B;
+  background-color: white;
+  font-weight: normal;
+}
+/* -------------------- */
+
+
+
+
+/* Misc. Style Codes */
+.scribble
+{
+	font-family: 'Reenie Beanie', cursive;
+}
+
+.bigscribble
+{
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 50px;
+}
+
+.loginheaderscribble
+{
+	font-size: 65px;
+}
+
+.inline
+{
+	display: inline;
+}
+
+.nopadding
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.badge
+{
+	background-color: #F49594;
+}
+
+.usericon
+{
+	height: 70px;
+	width: 70px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.greetings
+{
+    margin-bottom: 50px;
+}
+
+.adminoptions
+{
+	border: none;
+	padding-top: 25px;
+}
+
+.adminoptionicons
+{
+	height: 20px;
+	width: 20px;
+	margin-right: 20px;
+}
+
+.tableiconsize
+{
+	height: 75px;
+	width: 75px;
+	margin-top: 20px;
+}
+
+.noborder
+{
+	border: none;
+}
+
+.cutprice
+{
+	text-decoration: line-through;
+}
+
+.loves
+{
+	color: #20BF9F;
+}
+
+.hates
+{
+	color: #F49594;
+}
+/* -------------------- */
+
+
+
+
+/* Highlight Colour Modifier */
+::selection
+{
+	background-color: #99CDC9;
+}
+
+::moz-selection
+{
+	background-color: #99CDC9;
+}
+
+
+
+
+/* Dashboard Sidebar */
+.sidebar
+{
+		background-color: white;
+}
+
+.nav-sidebar
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.nav-sidebar:hover
+{
+	background: white;
+}
+
+
+
+
+/* Modal Pop-Ups */
+.modal-dialog
+{
+	background-color: white;
+	border-radius: 5px;
+}
+
+.modal-dialog h1
+{
+	color: #F49594;
+}
+
+.modal-body .pull-left
+{
+	margin-right: 1em;
+	margin-bottom: 15px;
+}
+
+.modal-body .pull-right
+{
+	margin-left: 1em;
+	margin-bottom: 15px;
+}
+
+.modal-body li
+{
+	text-decoration: none;
+}
+
+.modal-body strong
+{
+	font-size: 25px;
+}
+
+.modal-footer
+{
+	clear: both;
+}
+
+select
+{
+	margin-bottom: 5px;
+}
+
+.sizeandtype
+{
+	margin-left: -15px;
+}
+
+
+
+
+/* Login */
+.loginbackground
+{
+	background-image: url(../images/blurrycitylights.jpg);
+	background-repeat: no-repeat;
+	min-height: 1024px;
+	color: black;
+}
+
+.loginbackground h1
+{
+	margin-top: 300px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.form-control
+{
+    margin-bottom: 10px;
+}
+
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*
+.checkbox
+{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;;
+    font-weight: normal;
+    font-size: 16px;
+}
+*/
+
+.registerandforgottenpassword
+{
+	margin-top: 10px;
+}
+
+.registerandforgottenpassword a
+{
+	color: white;
+	margin: 0px	15px 0px 15px;
+	font-size: 17px;
+}
+
+.registerandforgottenpassword a:hover
+{
+	color: #F49594;
+}
+
+.registerandforgottenpassword p
+{
+	color: white;
+	margin: 0px 15px 20px 15px;
+	font-size: 17px;
+}
+
+
+
+
+/* Register */
+.registerbackground
+{
+	background-image: url(../images/blurrycitylights.jpg);
+	background-repeat: no-repeat;
+	min-height: 1024px;
+	color: white;
+}
+
+.registerbackground h1
+{
+	margin-top: 300px;
+	margin-bottom: 20px;
+}
+
+
+
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: black;
+   color: white;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #63D1F4;
+}
+
+.nav-sidebar > li > a:hover
+{
+	background-color: white !important;
+}
