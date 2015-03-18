@@ -1,17 +1,24 @@
 <?php
-$id = session_id();
-if ($id == "") {
-    session_start();
-}
+require_once 'Shop.php';
+require_once 'Connection.php';
+require_once 'ShopTableGateway.php';
+
+/* "require_once" means that a stored piece of information 
+  will remain as an output by having to load it just once */
 
 require 'ensureUserLoggedIn.php';
+
+$connection = Connection::getInstance();
+$gateway = new ShopTableGateway($connection);
+
+$statement = $gateway->getShops();
 ?>
 
 
 
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
         <title>Shiny!</title>
         <meta charset="utf-8">
@@ -27,6 +34,7 @@ require 'ensureUserLoggedIn.php';
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
+        <script src="js/shop.js"></script>
     </head>
     <body>
 
@@ -95,14 +103,30 @@ require 'ensureUserLoggedIn.php';
 
         <?php require 'toolbar.php' ?>
 
+        <?php
+        if (isset($message)) {
+            echo '<p>' . $message . '</p>';
+        }
+        ?>
 
 
 
-        <div class="container-fluid">
+
+        <div class="container-fluid q">
             <div class="row">
                 <div class="col-lg-2 col-md-2 sidebar visible-lg">
                     <ul class="nav nav-sidebar">
-                        <li><img src="images/user1.jpg" class="img img-circle usericon img-responsive"></li>
+                        <li>
+                            <div class="btn-group">
+                                <img src="images/user1.jpg" class="img img-circle usericon img-responsive dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href=""><span class="glyphicon glyphicon-camera"></span> &nbsp; Change Profile Picture</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-trash"></span> &nbsp; Delete Current Picture</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-ban-circle"></span> &nbsp; Disable Profile Picture</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <?php
                         $username = $_SESSION ['username'];
                         echo '<p class="greetings">Logged in as : ' . $username . '</p>';
@@ -113,6 +137,37 @@ require 'ensureUserLoggedIn.php';
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
                         <li><a><img src="images/icons/svg/delete.svg" class="adminoptionicons"> Delete</a></li>
                     </ul>
+
+                    <!-- <div class="thumbnail">
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
+                                     aria-valuemin="0" aria-valuemax="90" style="width: 90%">
+                                            <span class="sr-only">90% Complete</span>
+                                    </div>
+                            </div>
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" 
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                                            <span class="sr-only">75% Complete</span>
+                                    </div>
+                            </div>
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                            </div>
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="25" 
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                            <span class="sr-only">25% Complete</span>
+                                    </div>
+                            </div>
+                    </div> -->
                 </div>
 
 
@@ -120,6 +175,15 @@ require 'ensureUserLoggedIn.php';
 
 
                 <div class="col-lg-10 col-md-12">
+                    <!-- <div class="row">
+                        <div class="col-lg-8 col-md-7">
+                            <img src="images/visitorsanalytics.JPG" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-md-5">
+                            <img src="images/visitorsorigin.jpg" class="img-responsive">
+                        </div>
+                    </div> -->
+                    
                     <h2 class="scribble">Tables :</h2>
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
@@ -160,138 +224,78 @@ require 'ensureUserLoggedIn.php';
                         </div>
                     </div>
 
-                    <h2 class="scribble">Create Shop Form</h2>
+                    <h2 class="scribble">Shops</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Shop ID</th>
+                                    <th>Shop Address</th>
+                                    <th>Shop Manager Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Date Opened</th>
+                                    <th>URL Address</th>
+                                    <th>Region Number</th>
+                                    <th>Option:</th>
+                                </tr>
+                            </thead>
 
-                    <!-- "form id="shopForm" is used to refer back to the form element 
-                          in the createShop.js file -->
-                    <form id="createShopForm"
-                          action="createShop.php" 
-                          method="POST"
-                          onsubmit="return validateCreateProgrammer(this);">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <th>Shop Address</th>
-                                        <td>
-                                            <input class="form-control" type="text" name="address" value="<?php
-                                            if (isset($_POST) && isset($_POST['address'])) {
-                                                echo $_POST['address'];
-                                            }
-                                            ?>" />
-                                            <span id="addressError" class="error">
-                                                <?php
-                                                if (isset($errorMessage) && isset($errorMessage['address'])) {
-                                                    echo $errorMessage['address'];
-                                                }
-                                                ?>                                
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Shop Manager Name</th>
-                                        <td>
-                                            <input class="form-control" type="text" name="shopmanagername" value="<?php
-                                            if (isset($_POST) && isset($_POST['shopmanagername'])) {
-                                                echo $_POST['shopmanagername'];
-                                            }
-                                            ?>" />
-                                            <span id="shopmanagernameError" class="error">
-                                                <?php
-                                                if (isset($errorMessage) && isset($errorMessage['shopmanagername'])) {
-                                                    echo $errorMessage['shopmanagername'];
-                                                }
-                                                ?>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Phone Number</th>
-                                        <td>
-                                            <input class="form-control" type="text" name="phonenumber" value="<?php
-                                            if (isset($_POST) && isset($_POST['phonenumber'])) {
-                                                echo $_POST['phonenumber'];
-                                            }
-                                            ?>" />
-                                            <span id="phonenumberError" class="error">
-                                                <?php
-                                                if (isset($errorMessage) && isset($errorMessage['phonenumber'])) {
-                                                    echo $errorMessage['phonenumber'];
-                                                }
-                                                ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Date Opened</th>
-                                        <td>
-                                            <input class="form-control" type="text" name="dateopened" value="<?php
-                                            if (isset($_POST) && isset($_POST['dateopened'])) {
-                                                echo $_POST['dateopened'];
-                                            }
-                                            ?>" />
-                                            <span id="dateopenedError" class="error">
-                                                <?php
-                                                if (isset($errorMessage) && isset($errorMessage['dateopened'])) {
-                                                    echo $errorMessage['dateopened'];
-                                                }
-                                                ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>URL Address</th>
-                                        <td>
-                                            <input class="form-control" type="text" name="url" value="<?php
-                                            if (isset($_POST) && isset($_POST['url'])) {
-                                                echo $_POST['url'];
-                                            }
-                                            ?>" />
-                                            <span id="urlError" class="error">
-                                                <?php
-                                                if (isset($errorMessage) && isset($errorMessage['url'])) {
-                                                    echo $errorMessage['url'];
-                                                }
-                                                ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
+                            <tbody>
+                                <?php
+                                $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                while ($row) {
+                                    echo '<td>' . $row['shopID'] . '</td>';
+                                    echo '<td>' . $row['address'] . '</td>';
+                                    echo '<td>' . $row['shopmanagername'] . '</td>';
+                                    echo '<td>' . $row['phonenumber'] . '</td>';
+                                    echo '<td>' . $row['dateopened'] . '</td>';
+                                    echo '<td>' . $row['url'] . '</td>';
+                                    echo '<td>' . $row['regionnumber'] . '</td>';
+                                    echo '<td>'
+                                    . '<a href="viewShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-search btn btn-view"></span></button></a> '
+                                    . '<a href="editShopForm.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-cog btn btn-edit"></span></button></a> '
+                                    . '<a class="deleteShop" href="deleteShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-remove btn btn-delete"></span></button></a> '
+                                    . '</td>';
+                                    echo '</tr>';
 
-                                    <tr>
-                                        <th>Region Number</th>
-                                        <td>
-                                            <input class="form-control" type="text" name="regionnumber" value="<?php
-                                            if (isset($_POST) && isset($_POST['regionnumber'])) {
-                                                echo $_POST['regionnumber'];
-                                            }
-                                            ?>" />
-                                            <span id="regionnumberError" class="error">
-                                                <?php
-                                                if (isset($errorMessage) && isset($errorMessage['regionnumber'])) {
-                                                    echo $errorMessage['regionnumber'];
-                                                }
-                                                ?> 
-                                            </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-
-
-
-
-                        <input class="btn btn-login" type="submit" value="Save" name="createShop" />
-                        <input class="btn btn-login" type="button" value="Cancel" name="cancel" onclick="document.location.href = 'dashboard.php'" />
-
-
-
-
-                    </form>
+                                    $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+        <!-- Create Option Modal Pop-Up -->
+        <div id="create" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
+                    <h2 class="text-center"><img src="images/icons/svg/create.svg" class="modalpopupicon"> Create Option</h2>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="thumbnail noborder">
+                        <!-- <img src="images/icons/svg/create.svg" class="modalpopupicon"> -->
+                    </div>
+                    <p>Watch a One-Minute Tutorial Video or Get Started ?</p>
+                    <a href="createShopForm.php" class="btn btn-login">Create Shop</a>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+
 
 
 

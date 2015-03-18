@@ -119,13 +119,6 @@
                         </div>
                     </div>
 
-                    <!-- <label class="checkbox">
-                        <input type="checkbox" value="remember-me">
-                        Keep me signed in
-                    </label> -->
-
-
-
                     <div class="registerandforgottenpassword">
                         <input type="submit" value="Login" name="login" class="btn btn-login"/>
                         <a href="register.php">Register</a>
@@ -136,6 +129,41 @@
                 <a href="forgotPassword.php">Forgot your Password?</a>
             </div>
         </div>
+        
+        
+        
+        
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <center>
+                            <img src="images/visa.png" class="img-responsive">
+                        </center>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Order Tracking</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Privacy Policy</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>FAQs</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <p class="small">&copy 2015 Local Colour Retailers</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <h1>Local Colour</h1>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 

@@ -141,16 +141,48 @@
                         </div>
                     </div>
                 </div>
-
                 
-            
-
-            <div class="registerandforgottenpassword">
-                <input class="btn btn-login" type="submit" value="Register" name="register" />
-                <a href="login.php">Cancel</a>
-            </div>
-        </form>
+                <div class="registerandforgottenpassword">
+                    <input class="btn btn-login" type="submit" value="Register" name="register" />
+                    <a href="login.php">Cancel</a>
+                </div>
+            </form>
         </div>
+
+
+
+
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <center>
+                            <img src="images/visa.png" class="img-responsive">
+                        </center>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Order Tracking</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Privacy Policy</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>FAQs</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <p class="small">&copy 2015 Local Colour Retailers</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <h1>Local Colour</h1>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 

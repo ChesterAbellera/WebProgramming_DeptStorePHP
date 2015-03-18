@@ -73,7 +73,7 @@ if (empty($errorMessage))
     
     
     /* If there are no errors that occur, the user will be redirected to the homepage */
-    header("Location: home.php");
+    header("Location: dashboard.php");
     }
     else 
     {

@@ -62,16 +62,24 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Local Colour</a>
+                    <a class="navbar-brand" href="index.php">Local Colour</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="collapse">
                     <div class="">
                         <ul class="nav navbar-nav pull-right">
-                            <li><a>Dashboard <span class="glyphicon glyphicon-stats"></span></a></a></li>
+                            <li><a href="dashboard.php">Dashboard <span class="glyphicon glyphicon-stats"></span></a></a></li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Tasks <span class="glyphicon glyphicon-tasks"></span> <span class="badge">5</span><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a>Task 1</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
+                                                 aria-valuemin="0" aria-valuemax="90" style="width: 90%">
+                                                <span class="sr-only">90% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 2</a></li>
                                     <li><a>Task 3</a></li>
                                     <li><a>Task 4</a></li>
@@ -117,130 +125,230 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
             echo '<p>Error: ' . $errorMessage . '</p>';
         }
         ?>
-        <h2>Edit Shop Form</h2>
-
-        <form id="editShopForm" name="editShopForm" action="editShop.php" method="POST">
-            <input type="hidden" name="editID" value="<?php echo $id; ?>" />
-            <table id="t01"
-                   border="0">
-                <tbody>
-                    <tr>
-                        <th>Shop Address</th>
-                        <td>
-                            <input type="text" name="address" value="<?php
-                            if (isset($_POST) && isset($_POST['address'])) {
-                                echo $_POST['address'];
-                            } else
-                                echo $row['address']
-                                ?>" />
-                            <span id="addressError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['address'])) {
-                                    echo $errorMessage['address'];
-                                }
-                                ?>                                
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Shop Manager Name</th>
-                        <td>
-                            <input type="text" name="shopmanagername" value="<?php
-                            if (isset($_POST) && isset($_POST['shopmanagername'])) {
-                                echo $_POST['shopmanagername'];
-                            } else
-                                echo $row['shopmanagername']
-                                ?>" />
-                            <span id="shopmanagernameError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['shopmanagername'])) {
-                                    echo $errorMessage['shopmanagername'];
-                                }
-                                ?>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Phone Number</th>
-                        <td>
-                            <input type="text" name="phonenumber" value="<?php
-                            if (isset($_POST) && isset($_POST['phonenumber'])) {
-                                echo $_POST['phonenumber'];
-                            } else
-                                echo $row['phonenumber']
-                                ?>" />
-                            <span id="phonenumberError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['phonenumber'])) {
-                                    echo $errorMessage['phonenumber'];
-                                }
-                                ?> 
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Date Opened</th>
-                        <td>
-                            <input type="text" name="dateopened" value="<?php
-                            if (isset($_POST) && isset($_POST['dateopened'])) {
-                                echo $_POST['dateopened'];
-                            } else
-                                echo $row['dateopened']
-                                ?>" />
-                            <span id="dateopenedError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['dateopened'])) {
-                                    echo $errorMessage['dateopened'];
-                                }
-                                ?> 
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>URL Address</th> 
-                        <td>
-                            <input type="text" name="url" value="<?php
-                            if (isset($_POST) && isset($_POST['url'])) {
-                                echo $_POST['url'];
-                            } else
-                                echo $row['url']
-                                ?>" />
-                            <span id="urlError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['url'])) {
-                                    echo $errorMessage['url'];
-                                }
-                                ?> 
-                            </span>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Region Number</th>
-                        <td>
-                            <input type="text" name="regionnumber" value="<?php
-                            if (isset($_POST) && isset($_POST['regionnumber'])) {
-                                echo $_POST['regionnumber'];
-                            } else
-                                echo $row['regionnumber']
-                                ?>" />
-                            <span id="regionnumberError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['regionnumber'])) {
-                                    echo $errorMessage['regionnumber'];
-                                }
-                                ?> 
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <input type="submit" value="Save" name="updateShop" />
-            <input type="button" value="Cancel" name="cancel" onclick="document.location.href = 'home.php'" />
 
 
-        </form>
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 sidebar visible-lg">
+                    <ul class="nav nav-sidebar">
+                        <li><img src="images/user1.jpg" class="img img-circle usericon img-responsive"></li>
+                        <?php
+                        $username = $_SESSION ['username'];
+                        echo '<p class="greetings">Logged in as : ' . $username . '</p>';
+                        ?>
+                        <li><h2 class="scribble">Quicktips :</h2></li>
+                        <li><a href="#create" data-toggle="modal"><img src="images/icons/svg/create.svg" class="adminoptionicons"> Create</a></li>
+                        <li><a><img src="images/icons/svg/view.svg" class="adminoptionicons"> View</a></li>
+                        <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
+                        <li><a><img src="images/icons/svg/delete.svg" class="adminoptionicons"> Delete</a></li>
+                    </ul>
+
+                    <!-- <div class="thumbnail">
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
+                                     aria-valuemin="0" aria-valuemax="90" style="width: 90%">
+                                            <span class="sr-only">90% Complete</span>
+                                    </div>
+                            </div>
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" 
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                                            <span class="sr-only">75% Complete</span>
+                                    </div>
+                            </div>
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                            </div>
+                            <p>Content</p>
+                            <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="25" 
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                            <span class="sr-only">25% Complete</span>
+                                    </div>
+                            </div>
+                    </div> -->
+                </div>
+
+
+
+
+
+                <div class="col-lg-10 col-md-12">
+                    <h2 class="scribble">Tables :</h2>
+                    <div class="row placeholders text-center">
+                        <div class="container-fluid">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="thumbnail noborder">
+                                    <a><img src="images/icons/svg/stats.svg" class="tableiconsize"></a>
+                                    <a><h2 class="scribble">Stats</h2></a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="thumbnail noborder">
+                                    <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
+                                    <a><h2 class="scribble">Shops</h2></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="thumbnail noborder">
+                                    <a><img src="images/icons/svg/employee.svg" class="tableiconsize"></a>
+                                    <a><h2 class="scribble">Employees</h2></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="thumbnail noborder">
+                                    <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
+                                    <a><h2 class="scribble">Regions</h2></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <div class="thumbnail noborder">
+                                    <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
+                                    <a><h2 class="scribble">Products</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="scribble">Edit Shop Form</h2>
+                    <form id="editShopForm" name="editShopForm" action="editShop.php" method="POST">
+                        <input type="hidden" name="editID" value="<?php echo $id; ?>" />
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>Shop Address</th>
+                                        <td>
+                                            <input class="form-control" type="text" name="address" value="<?php
+                                            if (isset($_POST) && isset($_POST['address'])) {
+                                                echo $_POST['address'];
+                                            } else
+                                                echo $row['address']
+                                                ?>" />
+                                            <span id="addressError" class="error">
+                                                <?php
+                                                if (isset($errorMessage) && isset($errorMessage['address'])) {
+                                                    echo $errorMessage['address'];
+                                                }
+                                                ?>                                
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Shop Manager Name</th>
+                                        <td>
+                                            <input class="form-control" type="text" name="shopmanagername" value="<?php
+                                            if (isset($_POST) && isset($_POST['shopmanagername'])) {
+                                                echo $_POST['shopmanagername'];
+                                            } else
+                                                echo $row['shopmanagername']
+                                                ?>" />
+                                            <span id="shopmanagernameError" class="error">
+                                                <?php
+                                                if (isset($errorMessage) && isset($errorMessage['shopmanagername'])) {
+                                                    echo $errorMessage['shopmanagername'];
+                                                }
+                                                ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone Number</th>
+                                        <td>
+                                            <input class="form-control" type="text" name="phonenumber" value="<?php
+                                            if (isset($_POST) && isset($_POST['phonenumber'])) {
+                                                echo $_POST['phonenumber'];
+                                            } else
+                                                echo $row['phonenumber']
+                                                ?>" />
+                                            <span id="phonenumberError" class="error">
+                                                <?php
+                                                if (isset($errorMessage) && isset($errorMessage['phonenumber'])) {
+                                                    echo $errorMessage['phonenumber'];
+                                                }
+                                                ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Date Opened</th>
+                                        <td>
+                                            <input class="form-control" type="text" name="dateopened" value="<?php
+                                            if (isset($_POST) && isset($_POST['dateopened'])) {
+                                                echo $_POST['dateopened'];
+                                            } else
+                                                echo $row['dateopened']
+                                                ?>" />
+                                            <span id="dateopenedError" class="error">
+                                                <?php
+                                                if (isset($errorMessage) && isset($errorMessage['dateopened'])) {
+                                                    echo $errorMessage['dateopened'];
+                                                }
+                                                ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>URL Address</th> 
+                                        <td>
+                                            <input class="form-control" type="text" name="url" value="<?php
+                                            if (isset($_POST) && isset($_POST['url'])) {
+                                                echo $_POST['url'];
+                                            } else
+                                                echo $row['url']
+                                                ?>" />
+                                            <span id="urlError" class="error">
+                                                <?php
+                                                if (isset($errorMessage) && isset($errorMessage['url'])) {
+                                                    echo $errorMessage['url'];
+                                                }
+                                                ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Region Number</th>
+                                        <td>
+                                            <input class="form-control" type="text" name="regionnumber" value="<?php
+                                            if (isset($_POST) && isset($_POST['regionnumber'])) {
+                                                echo $_POST['regionnumber'];
+                                            } else
+                                                echo $row['regionnumber']
+                                                ?>" />
+                                            <span id="regionnumberError" class="error">
+                                                <?php
+                                                if (isset($errorMessage) && isset($errorMessage['regionnumber'])) {
+                                                    echo $errorMessage['regionnumber'];
+                                                }
+                                                ?> 
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <input class="btn btn-login" type="submit" value="Save" name="updateShop"/>
+                        <input class="btn btn-login" type="button" value="Cancel" name="cancel" onclick="document.location.href = 'dashboard.php'" />
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
 

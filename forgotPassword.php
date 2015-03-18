@@ -71,45 +71,82 @@
             </div>
         </nav>
         <!-- Menu ends here -->
-        
-        
-        
-        
+
+
+
+
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 loginbackground text-center">
 
             <h1 class="loginheaderscribble">Can't remember your password?</h1>
             <div class="registerandforgottenpassword">
                 <p>Type in your E-Mail Address to have a password reset code sent to you!</p>
             </div>
-            <form id="emailForm"
-                  action="checkEmail.php"
-                  method="POST"
-                  class="form-inline">
-                <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                    <form id="emailForm"
+                          action="checkEmail.php"
+                          method="POST"
+                          class="form">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
 
-                    <input type="email" 
-                           class="form-control loginregister-form" 
-                           id="exampleInputEmail3" 
-                           placeholder="Email"name="emailaddress" 
-                           value="" />
-                    <span id="emailaddressError" class="error">
-                        <?php
-                        if (isset($errorMessage) && isset($errorMessage['emailaddress'])) {
-                            echo $errorMessage['emailaddress'];
-                        }
-                        ?>                                 
-                    </span>
-                </div>
-                
-                <div class="registerandforgottenpassword">
-                    <input type="submit" 
-                       class="btn btn-login"value="Send" />
-                    <a href="login.php">Go back?</a>
-                </div>
-            </form>
+                            <input type="email" 
+                                   class="form-control loginregister-form" 
+                                   id="exampleInputEmail3" 
+                                   placeholder="Email"name="emailaddress" 
+                                   value="" />
+                            <span id="emailaddressError" class="error">
+                                <?php
+                                if (isset($errorMessage) && isset($errorMessage['emailaddress'])) {
+                                    echo $errorMessage['emailaddress'];
+                                }
+                                ?>                                 
+                            </span>
+                        </div>
 
+                        <div class="registerandforgottenpassword">
+                            <input type="submit" class="btn btn-login" value="Send" />
+                            <a href="login.php">Go back?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+
+
+
+
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <center>
+                            <img src="images/visa.png" class="img-responsive">
+                        </center>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Order Tracking</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Privacy Policy</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>FAQs</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <p class="small">&copy 2015 Local Colour Retailers</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <h1>Local Colour</h1>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 
