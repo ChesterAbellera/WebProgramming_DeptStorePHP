@@ -64,6 +64,7 @@ require 'ensureUserLoggedIn.php';
                                 <ul class="dropdown-menu">
                                     <li><a>Inbox <span class="glyphicon glyphicon-inbox"></span> <span class="badge">3</span></a></a></li>
                                     <li><a>Sent <span class="glyphicon glyphicon-send"></span></a></li>
+                                    <li class="divider"></li>
                                     <li><a>Trash <span class="glyphicon glyphicon-trash"></span></a></li>
                                 </ul>
                             </li>
@@ -123,35 +124,28 @@ require 'ensureUserLoggedIn.php';
                     <h2 class="scribble">Tables :</h2>
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="thumbnail noborder">
-                                    <a><img src="images/icons/svg/stats.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Stats</h2></a>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <div class="thumbnail noborder">
                                     <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Shops</h2></a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <div class="thumbnail noborder">
                                     <a><img src="images/icons/svg/employee.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Employees</h2></a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <div class="thumbnail noborder">
                                     <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Regions</h2></a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <div class="thumbnail noborder">
                                     <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Products</h2></a>

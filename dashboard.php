@@ -62,16 +62,57 @@ $statement = $gateway->getShops();
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Tasks <span class="glyphicon glyphicon-tasks"></span> <span class="badge">5</span><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a>Task 1</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
+                                                 aria-valuemin="0" aria-valuemax="90" style="width: 90%">
+                                                <span class="sr-only">90% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 2</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                                                <span class="sr-only">75% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 3</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 4</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="25" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                <span class="sr-only">25% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 5</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Messages <span class="glyphicon glyphicon-comment"></span> <span class="badge">3</span> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a>Inbox <span class="glyphicon glyphicon-inbox"></span> <span class="badge">3</span></a></a></li>
                                     <li><a>Sent <span class="glyphicon glyphicon-send"></span></a></li>
+                                    <li class="divider"></li>
                                     <li><a>Trash <span class="glyphicon glyphicon-trash"></span></a></li>
                                 </ul>
                             </li>
@@ -137,38 +178,13 @@ $statement = $gateway->getShops();
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
                         <li><a><img src="images/icons/svg/delete.svg" class="adminoptionicons"> Delete</a></li>
                     </ul>
-
-                    <!-- <div class="thumbnail">
-                            <p>Content</p>
-                            <div class="progress">
-                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
-                                     aria-valuemin="0" aria-valuemax="90" style="width: 90%">
-                                            <span class="sr-only">90% Complete</span>
-                                    </div>
-                            </div>
-                            <p>Content</p>
-                            <div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" 
-                                    aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-                                            <span class="sr-only">75% Complete</span>
-                                    </div>
-                            </div>
-                            <p>Content</p>
-                            <div class="progress">
-                                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
-                                    aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                        <span class="sr-only">50% Complete</span>
-                                    </div>
-                            </div>
-                            <p>Content</p>
-                            <div class="progress">
-                                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="25" 
-                                    aria-valuemin="0" aria-valuemax="100" style="width: 25%">
-                                            <span class="sr-only">25% Complete</span>
-                                    </div>
-                            </div>
-                    </div> -->
+                    
+                    <ul class="nav nav-sidebar">
+                        <li><a href="#filerecovery" data-toggle="modal"><img src="images/icons/svg/lockedcloud.svg" class="adminoptionicons"> File Recovery</a></li>
+                    </ul>
                 </div>
+                
+                
 
 
 
@@ -183,40 +199,92 @@ $statement = $gateway->getShops();
                             <img src="images/visitorsorigin.jpg" class="img-responsive">
                         </div>
                     </div> -->
-                    
-                    <h2 class="scribble">Tables :</h2>
+                    <div class="row placeholders">
+                        <div class="container-fluid">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="thumbnail">
+                                <div class="table table-responsive table-striped">
+                                    <table class="table">
+                                        <thead>
+                                        <h4 class="polaroid-grid-3 text-center"><b>Latest Orders  &nbsp; <span class="glyphicon glyphicon-shopping-cart"></span></b></h4>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a>#65 - Barbara Dunkelman</a></td>
+                                                <td><span class="badge badge-paid">Paid</span></td>
+                                                <td>$118.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>#73 - Geoff Ramsey</a></td>
+                                                <td><span class="badge badge-dispatched">Dispatched</span></td>
+                                                <td>$261.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>#81 - Meg Turner</a></td>
+                                                <td><span class="badge badge-refunded">Refunded</span></td>
+                                                <td>$149.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>#90 - Lindsey Jones</a></td>
+                                                <td><span class="badge badge-awaitingpayment">Awaiting Payment</span></td>
+                                                <td>$64.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>#96 - Jane Doe</a></td>
+                                                <td><span class="badge badge-failed">Failed</span></td>
+                                                <td>$22.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>#102 - Jane Doe</a></td>
+                                                <td><span class="badge badge-cancelled">Cancelled</span></td>
+                                                <td>$46.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>#105 - Gavin Free</a></td>
+                                                <td><span class="badge badge-paid">Paid</span></td>
+                                                <td>$213.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <h4><b>Tables:</b></h4>
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
+                            <!-- <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="thumbnail noborder">
                                     <a><img src="images/icons/svg/stats.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Stats</h2></a>
                                 </div>
-                            </div>
-                            
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <div class="thumbnail noborder">
+                            </div> -->
+
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Shops</h2></a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <div class="thumbnail noborder">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/employee.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Employees</h2></a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <div class="thumbnail noborder">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Regions</h2></a>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <div class="thumbnail noborder">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Products</h2></a>
                                 </div>
@@ -224,7 +292,7 @@ $statement = $gateway->getShops();
                         </div>
                     </div>
 
-                    <h2 class="scribble">Shops</h2>
+                    <h4><b>Shops</b></h4>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -267,21 +335,35 @@ $statement = $gateway->getShops();
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
+        
+        
+        
+        
         <!-- Create Option Modal Pop-Up -->
         <div id="create" class="modal fade" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h2 class="text-center"><img src="images/icons/svg/create.svg" class="modalpopupicon"> Create Option</h2>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="thumbnail noborder">
+                        <!-- <img src="images/icons/svg/create.svg" class="modalpopupicon"> -->
+                    </div>
+                    <p>Watch a One-Minute Tutorial Video or Get Started ?</p>
+                    <a href="createShopForm.php" class="btn btn-login">Create Shop</a>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+        <!-- File Recovery Option Modal Pop-Up -->
+        <div id="filerecovery" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
+                    <h2 class="text-center"><img src="images/icons/svg/lockedcloud.svg" class="modalpopupicon"> File Recovery</h2>
                 </div>
                 <div class="modal-body text-center">
                     <div class="thumbnail noborder">
