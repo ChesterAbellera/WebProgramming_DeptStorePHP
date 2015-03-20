@@ -56,9 +56,12 @@
                                     </div>
                                 </form>
                             </li>
-
-                            <li><a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a href="">0 Items <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                            <li class="dropdown"><a href="#" data-toggle="dropdown">Account <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><?php require 'toolbar2.php' ?></li>
+                                    <li><a href="">0 Items <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                                </ul>
+                            </li>
                             <li class="visible-xs">
                                 <form class="navbar-form" role="search">
                                     <div class="input-group">

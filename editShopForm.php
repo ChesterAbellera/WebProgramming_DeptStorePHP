@@ -81,9 +81,41 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                         </div>
                                     </li>
                                     <li><a>Task 2</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                                                <span class="sr-only">75% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 3</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 4</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="25" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                <span class="sr-only">25% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li><a>Task 5</a></li>
+                                    <li>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Messages <span class="glyphicon glyphicon-comment"></span> <span class="badge">3</span> <span class="caret"></span></a>
@@ -113,14 +145,16 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                 </form>
                             </li>
                             <li><a>Activity Log <span class="glyphicon glyphicon-folder-open"></span></a></a></li>
-                            <li><a href="">Logout <span class="glyphicon glyphicon-off"></span></a></li>
+                            <li><?php require 'toolbar.php' ?></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <?php require 'toolbar.php' ?>
+
+
+
         <?php
         if (isset($errorMessage)) {
             echo '<p>Error: ' . $errorMessage . '</p>';
@@ -131,11 +165,21 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
 
 
 
-        <div class="container-fluid">
+        <div class="container-fluid dashboard">
             <div class="row">
                 <div class="col-lg-2 col-md-2 sidebar visible-lg">
                     <ul class="nav nav-sidebar">
-                        <li><img src="images/user1.jpg" class="img img-circle usericon img-responsive"></li>
+                        <li>
+                            <div class="btn-group">
+                                <img src="images/user1.jpg" class="img img-circle usericon img-responsive dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href=""><span class="glyphicon glyphicon-camera"></span> &nbsp; Change Profile Picture</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-trash"></span> &nbsp; Delete Current Picture</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-ban-circle"></span> &nbsp; Disable Profile Picture</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <?php
                         $username = $_SESSION ['username'];
                         echo '<p class="greetings">Logged in as : ' . $username . '</p>';
@@ -145,6 +189,10 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                         <li><a><img src="images/icons/svg/view.svg" class="adminoptionicons"> View</a></li>
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
                         <li><a><img src="images/icons/svg/delete.svg" class="adminoptionicons"> Delete</a></li>
+                    </ul>
+                    
+                    <ul class="nav nav-sidebar">
+                        <li><a><img src="images/icons/svg/lockedcloud.svg" class="adminoptionicons"> File Recovery</a></li>
                     </ul>
                 </div>
 
@@ -157,28 +205,28 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail noborder">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Shops</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail noborder">
-                                    <a><img src="images/icons/svg/employee.svg" class="tableiconsize"></a>
+                                <div class="thumbnail">
+                                    <a><img src="images/icons/svg/userround.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Employees</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail noborder">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Regions</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail noborder">
+                                <div class="thumbnail">
                                     <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Products</h2></a>
                                 </div>
@@ -312,6 +360,41 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                 </div>
             </div>
         </div>
+        
+        
+        
+        
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dashboard-footer">
+            <div class="row">
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <center>
+                            <img src="images/visa.png" class="img-responsive">
+                        </center>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Order Tracking</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>Privacy Policy</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <a><p>FAQs</p></a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <p class="small">&copy 2015 Local Colour Retailers</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
+                        <h1>Local Colour</h1>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 

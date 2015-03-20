@@ -8,25 +8,11 @@ if ($session_id == "")
 
 if (isset($_SESSION['username']))
 {
-    echo '<br><p class="toolbar"><a href="home.php">Home</a></p>';
-    echo '<p class="toolbar"><a href="logout.php">Logout</a></p>';
+    echo '<a href="logout.php">Logout <span class="glyphicon glyphicon-off"></span></a>';
 }
 else 
 {
-    echo '<br><p class="toolbar"><a href="index.php">Home</a></p>';
-    echo '<p class="toolbar"><a href="login.php">Login</a></p>';
+    echo '<a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a>';
+    echo '<a href="">0 Items <span class="glyphicon glyphicon-shopping-cart"></span></a>';
+     
 }
-
-/* Primary Toolbar Code
-
-if (isset($_SESSION['username']))
-{
-    echo '<p><a href="home.php">Home</a></p>';
-    echo '<p><a href="logout.php">Logout</a></p>';
-}
-else 
-{
-    echo '<p><a href="index.php">Home</a></p>';
-    echo '<p><a href="login.php">Login</a></p>';
-}
- */

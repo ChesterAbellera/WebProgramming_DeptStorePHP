@@ -741,15 +741,17 @@ footer
 
 .usericon
 {
-	height: 70px;
-	width: 70px;
+	height: 75px;
+	width: 75px;
 	margin-left: 10px;
 	margin-bottom: 10px;
+        margin-top: -25px;
 }
 
 .greetings
 {
     margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .adminoptions
@@ -979,6 +981,11 @@ select
 
 
 
+.dashboard
+{
+    margin-top: 50px;
+}
+
 th
 {
     color: white;
@@ -1011,8 +1018,62 @@ td
 	background-color: white !important;
 }
 
-/* .q
+
+.thumbnail .btn-latestorders
 {
-    background-image: url(../images/q.jpg);
-    height: 100%;
-} */
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+	font-weight: normal;
+}
+
+.thumbnail .btn-latestorders:hover,
+.thumbnail .btn-latestorders:focus,
+.thumbnail .btn-latestorders:active,
+.thumbnail .btn-latestorders.active,
+.open .dropdown-toggle.thumbnail .btn-latestorders {
+  /*background-color: ;*/
+  color: white;
+  background-color: #F49594;
+  border: 1px solid #F49594;
+  font-weight: normal;
+}
+
+
+
+
+.badge-paid,
+.badge-dispatched,
+.badge-refunded,
+.badge-awaitingpayment,
+.badge-failed,
+.badge-cancelled
+{
+    border-radius: 5px;
+}
+
+.badge-paid
+{
+    background-color: #63D1F4;
+}
+.badge-dispatched
+{
+    background-color: #F49594;
+}
+.badge-refunded
+{
+    background-color: #20BF9F;
+}
+.badge-failed
+{
+    background-color: #EE3B3B;
+}
+.badge-cancelled
+{
+    background-color: black;
+}
+
+.dashboard-footer
+{
+    margin-top: 246px;
+}

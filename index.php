@@ -3,6 +3,8 @@ require_once 'Shop.php';
 require_once 'Connection.php';
 require_once 'ShopTableGateway.php';
 
+
+
 $id = session_id();
 if ($id == "") {
     session_start();
@@ -72,9 +74,11 @@ $statement = $gateway->getShops();
                                     </div>
                                 </form>
                             </li>
-
-                            <li><a href="login.php">Login <span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a href="">0 Items <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                            <li class="dropdown"><a href="#" data-toggle="dropdown">Account <span class="glyphicon glyphicon-bookmark"></span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><?php require 'toolbar2.php' ?></li>
+                                </ul>
+                            </li>
                             <li class="visible-xs">
                                 <form class="navbar-form" role="search">
                                     <div class="input-group">
