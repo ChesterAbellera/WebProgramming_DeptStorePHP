@@ -10,7 +10,6 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
@@ -75,6 +74,7 @@
 
 
 
+        <!-- Background Image and Form Elements -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 loginbackground text-center">
 
             <h1 class="loginheaderscribble">Can't remember your password?</h1>
@@ -116,6 +116,7 @@
 
 
 
+        <!-- Footer -->
         <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
                 <div class="container">
@@ -147,13 +148,12 @@
                 </div>
             </div>
         </footer>
-
-
-
-        <!-- Link used to refer to the email.js file 
-             to execute error checks within the user input -->
+        
+        
+        
+        
         <script type="text/javascript" src="js/email.js"></script>
-        <!-- Javascript -->
+        
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>

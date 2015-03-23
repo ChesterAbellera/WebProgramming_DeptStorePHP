@@ -10,16 +10,11 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
     </head>
-
-
-
-
     <body>
 
 
@@ -56,10 +51,9 @@
                                     </div>
                                 </form>
                             </li>
-                            <li class="dropdown"><a href="#" data-toggle="dropdown">Account <span class="caret"></span></a>
+                            <li class="dropdown"><a href="#" data-toggle="dropdown">Account <span class="glyphicon glyphicon-bookmark"></span><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><?php require 'toolbar2.php' ?></li>
-                                    <li><a href="">0 Items <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                                 </ul>
                             </li>
                             <li class="visible-xs">
@@ -83,8 +77,7 @@
 
 
 
-        <!-- Header -->
-        <!-- Vintage Section -->
+        <!-- Vintage Apparel Jumbotron -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 vintage text-center">
             <h1 class="bigscribble">Feeling nostalgic?</h1>
             <!-- <h2 class="scribble">We are an ever-growing <u>commmunity</u> of crafters, designers and daydreamers</h2> -->
@@ -199,7 +192,8 @@
 
 
 
-        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <!-- Footer -->
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gappedfooter">
             <div class="row">
                 <div class="container">
                     <div class="col-lg-2 col-md-2 col-sm-2 footercontent">

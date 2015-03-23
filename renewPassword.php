@@ -9,14 +9,16 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
     </head>
-
     <body>
+        
+        
+        
+        
         <!-- Menu -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Dropdown Menu for Mobile Devices -->
@@ -71,6 +73,7 @@
 
 
 
+        <!-- Background Image -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 loginbackground text-center">
             <h1 class="loginheaderscribble">Thanks!</h1>
 
@@ -84,6 +87,7 @@
 
 
 
+        <!-- Footer -->
         <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
                 <div class="container">
@@ -120,7 +124,7 @@
 
 
         <script type="text/javascript" src="js/email.js"></script>
-        <!-- Javascript -->
+        
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>

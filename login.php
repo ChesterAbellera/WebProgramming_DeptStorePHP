@@ -10,7 +10,6 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
@@ -81,6 +80,7 @@
 
 
 
+        <!-- Background Image and Form Elements -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 loginbackground text-center">
             <h1 class="loginheaderscribble">Welcome Back</h1>
 
@@ -89,6 +89,7 @@
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                            <!-- Email -->
                             <input class="form-control loginregister-form" 
                                    type="text" 
                                    name="username" 
@@ -102,7 +103,7 @@
                                 }
                                 ?>
                             </span>
-
+                            <!-- Password -->
                             <input class="form-control loginregister-form"
                                    type="password"
                                    name="password"
@@ -129,10 +130,11 @@
                 <a href="forgotPassword.php">Forgot your Password?</a>
             </div>
         </div>
-        
-        
-        
-        
+
+
+
+
+        <!-- Footer -->
         <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
                 <div class="container">

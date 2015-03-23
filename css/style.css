@@ -15,8 +15,6 @@ Stock Fonts:
 
 		font-family: 'Josefin Sans', sans-serif;
 		font-family: 'Reenie Beanie', cursive;
-		font-family: 'La Belle Aurore', cursive;
-		font-family: 'Amatic SC', cursive;
 
 
 
@@ -257,12 +255,14 @@ ul.nav a:active
 
 .polaroid-grid-4
 {
-	padding: 10px;
+	padding-left: 10px;
+        padding-right: 10px;
 }
 
 .polaroid-grid-3
 {
-	padding: 5px;
+	padding-left: 5px;
+        padding-right: 5px;
 }
 
 strong
@@ -607,6 +607,7 @@ footer
 	background-color: black;
 	border: 1px solid black;
 	font-weight: normal;
+        font-family: 'Josefin Sans', sans-serif;
 }
 
 .btn-login:hover,
@@ -722,6 +723,11 @@ footer
 	font-size: 65px;
 }
 
+.boldtext
+{
+    font-weight: bold;
+}
+
 .inline
 {
 	display: inline;
@@ -741,11 +747,11 @@ footer
 
 .usericon
 {
-	height: 75px;
-	width: 75px;
+	height: 90px;
+	width: 90px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-        margin-top: -25px;
+        margin-top: -40px;
 }
 
 .greetings
@@ -793,12 +799,6 @@ footer
 {
 	color: #F49594;
 }
-
-.modalpopupicon
-{
-    height: 50px;
-    width: 50px;
-}
 /* -------------------- */
 
 
@@ -821,7 +821,7 @@ footer
 /* Dashboard Sidebar */
 .sidebar
 {
-		background-color: white;
+    background-color: transparent;
 }
 
 .nav-sidebar
@@ -832,7 +832,12 @@ footer
 
 .nav-sidebar:hover
 {
-	background: white;
+	background: transparent;
+}
+
+.nav-sidebar > li > a:hover
+{
+	background-color: transparent !important;
 }
 
 
@@ -916,26 +921,6 @@ select
     margin-bottom: 10px;
 }
 
-.account-wall
-{
-    margin-top: 20px;
-    padding: 40px 0px 20px 0px;
-    background-color: #f7f7f7;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-/*
-.checkbox
-{
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;;
-    font-weight: normal;
-    font-size: 16px;
-}
-*/
-
 .registerandforgottenpassword
 {
 	margin-top: 10px;
@@ -1013,18 +998,17 @@ td
   background-color: #F49594;
 }
 
-.nav-sidebar > li > a:hover
+.thumbnail .btn-login
 {
-	background-color: white !important;
+    color: white !important;
 }
-
 
 .thumbnail .btn-latestorders
 {
-	color: white;
-	background-color: black;
-	border: 1px solid black;
-	font-weight: normal;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    font-weight: normal;
 }
 
 .thumbnail .btn-latestorders:hover,
@@ -1032,15 +1016,11 @@ td
 .thumbnail .btn-latestorders:active,
 .thumbnail .btn-latestorders.active,
 .open .dropdown-toggle.thumbnail .btn-latestorders {
-  /*background-color: ;*/
   color: white;
   background-color: #F49594;
   border: 1px solid #F49594;
   font-weight: normal;
 }
-
-
-
 
 .badge-paid,
 .badge-dispatched,
@@ -1073,7 +1053,12 @@ td
     background-color: black;
 }
 
-.dashboard-footer
+.gappedfooter
 {
-    margin-top: 246px;
+    margin-top: 150px;
+}
+
+.background-grey
+{
+    background-color: #F7F7F7;
 }

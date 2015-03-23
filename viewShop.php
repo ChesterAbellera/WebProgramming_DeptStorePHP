@@ -69,51 +69,11 @@ $statement = $gateway->getShopByShopId($sID);
                             <li><a href="dashboard.php">Dashboard <span class="glyphicon glyphicon-stats"></span></a></a></li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Tasks <span class="glyphicon glyphicon-tasks"></span> <span class="badge">5</span><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>Task 1</a></li>
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
-                                                 aria-valuemin="0" aria-valuemax="90" style="width: 90%">
-                                                <span class="sr-only">90% Complete</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a>Task 2</a></li>
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" 
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-                                                <span class="sr-only">75% Complete</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a>Task 3</a></li>
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                                <span class="sr-only">50% Complete</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a>Task 4</a></li>
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="25" 
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%">
-                                                <span class="sr-only">25% Complete</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a>Task 5</a></li>
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" 
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                                <span class="sr-only">50% Complete</span>
-                                            </div>
-                                        </div>
-                                    </li>
+                                    <li><a><b>1</b> - Inventory</a></li>
+                                    <li><a><b>2</b> - Re-Stock</a></li>
+                                    <li><a><b>3</b> - Review Orders</a></li>
+                                    <li><a><b>4</b> - Reprint Requests</a></li>
+                                    <li><a><b>5</b> - Invoices</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Messages <span class="glyphicon glyphicon-comment"></span> <span class="badge">3</span> <span class="caret"></span></a>
@@ -149,6 +109,7 @@ $statement = $gateway->getShopByShopId($sID);
                 </div>
             </div>
         </nav>
+        <!-- Menu ends here -->
 
 
 
@@ -162,8 +123,10 @@ $statement = $gateway->getShopByShopId($sID);
 
 
 
+        <!-- Dashboard Container -->
         <div class="container-fluid dashboard">
             <div class="row">
+                <!-- Sidebar -->
                 <div class="col-lg-2 col-md-2 sidebar visible-lg">
                     <ul class="nav nav-sidebar">
                         <li>
@@ -186,10 +149,9 @@ $statement = $gateway->getShopByShopId($sID);
                         <li><a><img src="images/icons/svg/view.svg" class="adminoptionicons"> View</a></li>
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
                         <li><a><img src="images/icons/svg/delete.svg" class="adminoptionicons"> Delete</a></li>
-                    </ul>
-
-                    <ul class="nav nav-sidebar">
+                        <li><a><img src="images/icons/svg/storagecloud.svg" class="adminoptionicons"> Storage</a></li>
                         <li><a><img src="images/icons/svg/lockedcloud.svg" class="adminoptionicons"> File Recovery</a></li>
+                        <li><a><img src="images/icons/svg/widgets.svg" class="adminoptionicons"> Customizing Widgets</a></li>
                     </ul>
                 </div>
 
@@ -197,33 +159,34 @@ $statement = $gateway->getShopByShopId($sID);
 
 
 
+                <!-- Image Row -->
                 <div class="col-lg-10 col-md-12">
-                    <h2 class="scribble">Tables :</h2>
+                    <h4 class="polaroid-grid-4 boldtext">Tables</h4>
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Shops</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/userround.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Employees</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Regions</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Products</h2></a>
                                 </div>
@@ -231,61 +194,65 @@ $statement = $gateway->getShopByShopId($sID);
                         </div>
                     </div>
 
-                    <h2 class="scribble">Edit Shop Form</h2>
+                    <div class="col-lg-6">
+                        <h4 class="boldtext">Shop Details</h4>
+                        <div class="thumbnail background-grey">
+
+                            <form id="editShopForm" name="editShopForm" action="editShop.php" method="POST">
+                                <input type="hidden" name="editID" value="<?php echo $id; ?>" />
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <?php
+                                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                            echo '<tr>';
+                                            echo '<th>Shop ID</th>'
+                                            . '<td>' . $row['shopID'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Shop Address</th>'
+                                            . '<td>' . $row['address'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Shop Manager Name</th>'
+                                            . '<td>' . $row['shopmanagername'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Phone Number</th>'
+                                            . '<td>' . $row['phonenumber'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Date Opened</th>'
+                                            . '<td>' . $row['dateopened'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>URL Adress</th>'
+                                            . '<td>' . $row['url'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Region Number</th>'
+                                            . '<td>' . $row['regionnumber'] . '</td>';
+                                            echo '</tr>';
+                                            //echo '<tr>';
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <a class="btn btn-login" href="editShopForm.php?id=<?php echo $row['shopID']; ?>">Edit</a>
+                                <a class="deleteShop btn btn-login" href="deleteShop.php?id=<?php echo $row['shopID']; ?>">Delete</a>
+                                <input class="btn btn-login" type="button" value="Go Back ?" name="cancel" onclick="document.location.href = 'dashboard.php'" />
 
 
-                    <form id="editShopForm" name="editShopForm" action="editShop.php" method="POST">
-                        <input type="hidden" name="editID" value="<?php echo $id; ?>" />
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                    <?php
-                                    $row = $statement->fetch(PDO::FETCH_ASSOC);
-                                    echo '<tr>';
-                                    echo '<th>Shop ID:</th>'
-                                    . '<td>' . $row['shopID'] . '</td>';
-                                    echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<th>Shop Address:</th>'
-                                    . '<td>' . $row['address'] . '</td>';
-                                    echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<th>Shop Manager Name:</th>'
-                                    . '<td>' . $row['shopmanagername'] . '</td>';
-                                    echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<th>Phone Number:</th>'
-                                    . '<td>' . $row['phonenumber'] . '</td>';
-                                    echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<th>Date Opened:</th>'
-                                    . '<td>' . $row['dateopened'] . '</td>';
-                                    echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<th>URL Adress:</th>'
-                                    . '<td>' . $row['url'] . '</td>';
-                                    echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<th>Region Number:</th>'
-                                    . '<td>' . $row['regionnumber'] . '</td>';
-                                    echo '</tr>';
-                                    //echo '<tr>';
-                                    ?>
-                                </tbody>
-                            </table>
+                            </form>
                         </div>
-                        <input class="btn btn-login" type="button" value="Go Back ?" name="cancel" onclick="document.location.href = 'dashboard.php'" />
-                        <a href="editShopForm.php?id=<?php echo $row['shopID']; ?>">Edit</a>
-                        <a class="deleteShop" href="deleteShop.php?id=<?php echo $row['shopID']; ?>">Delete</a>
-
-
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -293,13 +260,11 @@ $statement = $gateway->getShopByShopId($sID);
 
 
 
-        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dashboard-footer">
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-fixed-bottom">
             <div class="row">
                 <div class="container">
                     <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
-                        <center>
-                            <img src="images/visa.png" class="img-responsive">
-                        </center>
+                        <a><p>Dashboard Workspace</p></a>
                     </div>
 
                     <div class="col-lg-2 col-md-2 col-sm-2 footercontent">

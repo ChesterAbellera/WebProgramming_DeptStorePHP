@@ -101,6 +101,7 @@ $statement = $gateway->getShops();
                 </div>
             </div>
         </nav>
+        <!-- Menu Ends Here -->
 
 
 
@@ -114,8 +115,10 @@ $statement = $gateway->getShops();
 
 
 
+        <!-- Dashboard Container -->
         <div class="container-fluid dashboard">
             <div class="row">
+                <!-- Sidebar -->
                 <div class="col-lg-2 col-md-2 sidebar visible-lg">
                     <ul class="nav nav-sidebar">
                         <li>
@@ -138,33 +141,30 @@ $statement = $gateway->getShops();
                         <li><a><img src="images/icons/svg/view.svg" class="adminoptionicons"> View</a></li>
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
                         <li><a><img src="images/icons/svg/delete.svg" class="adminoptionicons"> Delete</a></li>
-                    </ul>
-
-                    <ul class="nav nav-sidebar">
+                        <li><a><img src="images/icons/svg/storagecloud.svg" class="adminoptionicons"> Storage</a></li>
                         <li><a><img src="images/icons/svg/lockedcloud.svg" class="adminoptionicons"> File Recovery</a></li>
+                        <li><a><img src="images/icons/svg/widgets.svg" class="adminoptionicons"> Customizing Widgets</a></li>
                     </ul>
                 </div>
-                
-                
-                
-                
+
+
+
+
+                <!-- Main Dashboard Elements -->
                 <div class="col-lg-10 col-md-12">
-                    <!-- <div class="row">
-                        <div class="col-lg-8 col-md-7">
-                            <img src="images/visitorsanalytics.JPG" class="img-responsive">
-                        </div>
-                        <div class="col-lg-4 col-md-5">
-                            <img src="images/visitorsorigin.jpg" class="img-responsive">
-                        </div>
-                    </div> -->
                     <div class="row placeholders">
                         <div class="container-fluid">
-                            <div class="col-lg-6 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                            <div class="container-fluid">
+                                <h4 class="boldtext">Dashboard</h4>
+                            </div>
+
+                            <!-- Enquiries Table -->
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="thumbnail background-grey">
                                     <div class="table table-responsive">
                                         <table class="table">
                                             <thead>
-                                            <h4 class="polaroid-grid-3 text-center"><b>Enquiries  &nbsp; <span class="glyphicon glyphicon-envelope"></span></b></h4>
+                                            <h4 class="polaroid-grid-3 text-center boldtext">Enquiries  &nbsp; <span class="glyphicon glyphicon-envelope"></span></h4>
                                             <th>Subject</th>
                                             <th>Date Received</th>
                                             </thead>
@@ -195,12 +195,14 @@ $statement = $gateway->getShops();
                                     <a class="btn btn-latestorders">View all enquiries</a>
                                 </div>
                             </div>
+
+                            <!-- Latest Orders Table -->
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <div class="table table-responsive">
                                         <table class="table">
                                             <thead>
-                                            <h4 class="polaroid-grid-3 text-center"><b>Latest Orders  &nbsp; <span class="glyphicon glyphicon-shopping-cart"></span></b></h4>
+                                            <h4 class="polaroid-grid-3 text-center boldtext">Latest Orders  &nbsp; <span class="glyphicon glyphicon-shopping-cart"></span></h4>
                                             <th>Order ID</th>
                                             <th>Status</th>
                                             <th>Amount</th>
@@ -222,7 +224,7 @@ $statement = $gateway->getShops();
                                                     <td>$149.00</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a>#77 - Miles Luna</a></td>
+                                                    <td><a>#77 - Gavin Free</a></td>
                                                     <td><span class="badge badge-failed">Failed</span></td>
                                                     <td>$22.00</td>
                                                 </tr>
@@ -237,12 +239,14 @@ $statement = $gateway->getShops();
                                     <a class="btn btn-latestorders">View all orders</a>
                                 </div>
                             </div>
+
+                            <!-- Calendar -->
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <div class="table table-responsive">
                                         <table class="table">
                                             <thead>
-                                            <h4 class="polaroid-grid-3 text-center"><b>March  &nbsp; <span class="glyphicon glyphicon-calendar"></span></b></h4>
+                                            <h4 class="polaroid-grid-3 text-center boldtext">March  &nbsp; <span class="glyphicon glyphicon-calendar"></span></h4>
                                             <th class="text-center">Mo</th>
                                             <th class="text-center">Tu</th>
                                             <th class="text-center">We</th>
@@ -306,41 +310,34 @@ $statement = $gateway->getShops();
                         </div>
                     </div>
 
-                    <div class="container-fluid">
-                        <h4><b>Tables:</b></h4>
-                    </div>
+                    <!-- Image Row -->
+                    <h4 class="polaroid-grid-4 boldtext">Tables</h4>
+
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
-                            <!-- <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="thumbnail noborder">
-                                    <a><img src="images/icons/svg/stats.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Stats</h2></a>
-                                </div>
-                            </div> -->
-
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Shops</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/userround.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Employees</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Regions</h2></a>
                                 </div>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail">
+                                <div class="thumbnail background-grey">
                                     <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
                                     <a><h2 class="scribble">Products</h2></a>
                                 </div>
@@ -349,9 +346,10 @@ $statement = $gateway->getShops();
                     </div>
 
 
-                    <div class="col-lg-12 col-md-3 col-sm-3">
-                        <h4><b>Shops:</b></h4>
-                        <div class="thumbnail">
+                    <!-- Shops Table -->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h4 class="boldtext">Shops</h4>
+                        <div class="thumbnail background-grey">
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
@@ -363,7 +361,7 @@ $statement = $gateway->getShops();
                                             <th>Date Opened</th>
                                             <th>URL Address</th>
                                             <th>Region Number</th>
-                                            <th>Option:</th>
+                                            <th>Options</th>
                                         </tr>
                                     </thead>
 
@@ -394,7 +392,6 @@ $statement = $gateway->getShops();
                             <a href="createShopForm.php" class="btn btn-latestorders">Create Shop</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -402,13 +399,12 @@ $statement = $gateway->getShops();
 
 
 
-        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dashboard-footer">
+        <!-- Footer -->
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gappedfooter">
             <div class="row">
                 <div class="container">
                     <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
-                        <center>
-                            <img src="images/visa.png" class="img-responsive">
-                        </center>
+                        <a><p>Dashboard Workspace</p></a>
                     </div>
 
                     <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
@@ -437,29 +433,6 @@ $statement = $gateway->getShops();
 
 
 
-        <!-- Create Option Modal Pop-Up
-        <div id="create" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-header">
-                    <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
-                    <h2 class="text-center"><img src="images/icons/svg/create.svg" class="modalpopupicon"> Create Option</h2>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="thumbnail noborder">
-                    </div>
-                    <p>Watch a One-Minute Tutorial Video or Get Started ?</p>
-                    <a href="createShopForm.php" class="btn btn-login">Create Shop</a>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                </div>
-            </div>
-        </div> -->
-
-
-
-
-
         <!-- Javascript -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -482,7 +455,9 @@ $statement = $gateway->getShops();
 
 
 
-<!-- <li>
+<!-- PROGRESS BAR CODES
+
+<li>
     <div class="progress">
         <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" 
              aria-valuemin="0" aria-valuemax="90" style="width: 90%">

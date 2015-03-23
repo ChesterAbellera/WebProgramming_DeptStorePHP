@@ -32,7 +32,6 @@ $statement = $gateway->getShops();
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
@@ -100,7 +99,7 @@ $statement = $gateway->getShops();
 	
 	
 	
-        <!-- Header -->
+        <!-- Primary Jumbotron -->
         <div class="jumbotron">
             <div class="container">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
@@ -120,16 +119,11 @@ $statement = $gateway->getShops();
         <div class="babytron text-center">
             <h2 class="scribble">Spring Season Sale <small>Up to 15% reductions off Selected items</small></u></h2>
         </div>
-
-
-
-
-	
-
-
-
-
-        <!-- Popular Section -->
+        
+        
+        
+        
+        <!-- Popular Apparel Section -->
         <div class="container popular">
             <h1>What's Popular</h1>
             <div class="row">
@@ -193,7 +187,7 @@ $statement = $gateway->getShops();
 	
 	
 	
-        <!-- New Section -->
+        <!-- New Apparel Section -->
         <div class="container new">
             <h1>What's New</h1>
             <div class="row">
@@ -256,7 +250,7 @@ $statement = $gateway->getShops();
 	
 	
 	
-        <!--  Photography Section -->
+        <!--  Photography Jumbotron -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 photography text-center">
             <h1>Get Picturesque</h1>
             <a class="a.btn btn-info btn-lg">Shop Camera Gear</a>
@@ -346,7 +340,7 @@ $statement = $gateway->getShops();
 
 
 
-        <!--  Travel Section -->
+        <!--  Travel Jumbotron -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 travelbackground text-center">
             <h1>Escaping somewhere?</h1>
             <a class="a.btn btn-info btn-lg">Shop Travel Gear</a>
@@ -568,7 +562,6 @@ $statement = $gateway->getShops();
 	<!-- Sketches Collage -->
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sketches">
 	</div>
-	<!-- <a href="#"><img src="images/sketchesgreen.jpg" class="img-responsive sketches"></a> -->
 	
 	
 	
@@ -642,7 +635,7 @@ $statement = $gateway->getShops();
 
 
 
-        <!-- Modal Window Pop Ups -->
+        <!-- Item Modal Window Pop Ups -->
 
         <!-- Popular Item 1 Modal Pop-Up -->
         <div id="pop1" class="modal fade" tabindex="-1">
@@ -1213,6 +1206,8 @@ $statement = $gateway->getShops();
 
 
 
+        <!-- Crew Modal Window Pop-Ups -->
+        
         <!-- Courtney's Modal Pop-Up -->
         <div id="courtney" class="modal fade" tabindex="-1">
             <div class="modal-dialog">
