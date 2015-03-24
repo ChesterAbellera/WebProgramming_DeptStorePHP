@@ -165,31 +165,39 @@ $statement = $gateway->getShopByShopId($sID);
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Shops</h2></a>
-                                </div>
+                                <a href="viewShops.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/building.svg" class="tableiconsize">
+                                        <h2 class="scribble">Shops</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/userround.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Employees</h2></a>
-                                </div>
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/userround.svg" class="tableiconsize">
+                                        <h2 class="scribble">Employees</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Regions</h2></a>
-                                </div>
+                                <a href="viewRegions.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
+                                        <h2 class="scribble">Regions</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Products</h2></a>
-                                </div>
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/box.svg" class="tableiconsize">
+                                        <h2 class="scribble">Products</h2>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -247,7 +255,7 @@ $statement = $gateway->getShopByShopId($sID);
 
                                 <a class="btn btn-login" href="editShopForm.php?id=<?php echo $row['shopID']; ?>">Edit</a>
                                 <a class="deleteShop btn btn-login" href="deleteShop.php?id=<?php echo $row['shopID']; ?>">Delete</a>
-                                <input class="btn btn-login" type="button" value="Go Back ?" name="cancel" onclick="document.location.href = 'dashboard.php'" />
+                                <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewShops.php'" />
 
 
                             </form>

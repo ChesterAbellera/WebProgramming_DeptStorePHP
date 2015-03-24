@@ -55,7 +55,7 @@ if ($regionnumber === FALSE || $regionnumber === '') {
 if (empty($errorMessage)) 
 {
     $gateway->updateShop($shopID, $address, $shopmanagername, $phonenumber, $url, $dateopened, $regionnumber);
-    header('Location: dashboard.php');
+    header('Location: viewShops.php');
 }
 else 
 {

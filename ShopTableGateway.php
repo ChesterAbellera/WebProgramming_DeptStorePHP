@@ -13,7 +13,7 @@ class ShopTableGateway {
 
     // METHOD TO CONNECT TO DATABASE AND RETURN THE EXISTING SHOPS
     public function getShops() {
-        // execute a query to get all shops
+        // execute a query to get all regions
         $sqlQuery = "SELECT * FROM shops";
         
         $statement = $this->connection->prepare($sqlQuery);

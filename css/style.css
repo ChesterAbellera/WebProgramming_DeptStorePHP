@@ -1062,3 +1062,15 @@ td
 {
     background-color: #F7F7F7;
 }
+
+.tablebutton
+{
+    color: black;
+}
+
+.tablebutton div:hover
+{
+    color: #F49594;
+    background-color: white;
+    border: 1px solid black;
+}

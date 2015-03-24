@@ -1,17 +1,31 @@
 <?php
+require_once 'Region.php';
+require_once 'Connection.php';
+require_once 'RegionTableGateway.php';
+
 $id = session_id();
 if ($id == "") {
     session_start();
 }
 
 require 'ensureUserLoggedIn.php';
+
+if (!isset($_GET) || !isset($_GET['id'])) {
+    die('Invalid request');
+}
+$regionnumber = $_GET['id'];
+
+$connection = Connection::getInstance();
+$gateway = new RegionTableGateway($connection);
+
+$statement = $gateway->getRegionByRegionNumber($regionnumber);
 ?>
 
 
 
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
         <title>Shiny!</title>
         <meta charset="utf-8">
@@ -27,9 +41,10 @@ require 'ensureUserLoggedIn.php';
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
-        <script src="js/shop.js"></script>
+        <script type="text/javascript" src="js/shop.js"></script>
     </head>
     <body>
+
 
 
 
@@ -99,6 +114,15 @@ require 'ensureUserLoggedIn.php';
 
 
 
+        <?php
+        if (isset($message)) {
+            echo '<p>' . $message . '</p>';
+        }
+        ?>
+
+
+
+
         <!-- Dashboard Container -->
         <div class="container-fluid dashboard">
             <div class="row">
@@ -137,7 +161,7 @@ require 'ensureUserLoggedIn.php';
 
                 <!-- Image Row -->
                 <div class="col-lg-10 col-md-12">
-                    <h4 class="boldtext polaroid-grid-4">Tables</h4>
+                    <h4 class="polaroid-grid-4 boldtext">Tables</h4>
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
                             <div class="col-lg-3 col-md-3 col-sm-3">
@@ -179,125 +203,50 @@ require 'ensureUserLoggedIn.php';
                     </div>
 
                     <div class="col-lg-6">
-                        <h4 class="boldtext">Create Shop Form</h4>
+                        <h4 class="boldtext">Shop Details</h4>
                         <div class="thumbnail background-grey">
 
-                            <!-- "form id="shopForm" is used to refer back to the form element 
-                                  in the createShop.js file -->
-                            <form id="createShopForm"
-                                  action="createShop.php" 
-                                  method="POST">
+                            <form id="editRegionForm" name="editRegionForm" action="editRegion.php" method="POST">
+                                <input type="hidden" name="editID" value="<?php echo $id; ?>" />
                                 <div class="table-responsive">
                                     <table class="table">
                                         <tbody>
-                                            <tr>
-                                                <th>Shop Address</th>
-                                                <td>
-                                                    <input class="form-control" type="text" name="address" value="<?php
-                                                    if (isset($_POST) && isset($_POST['address'])) {
-                                                        echo $_POST['address'];
-                                                    }
-                                                    ?>" />
-                                                    <span id="addressError" class="error">
-                                                        <?php
-                                                        if (isset($errorMessage) && isset($errorMessage['address'])) {
-                                                            echo $errorMessage['address'];
-                                                        }
-                                                        ?>                                
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>Shop Manager Name</th>
-                                                <td>
-                                                    <input class="form-control" type="text" name="shopmanagername" value="<?php
-                                                    if (isset($_POST) && isset($_POST['shopmanagername'])) {
-                                                        echo $_POST['shopmanagername'];
-                                                    }
-                                                    ?>" />
-                                                    <span id="shopmanagernameError" class="error">
-                                                        <?php
-                                                        if (isset($errorMessage) && isset($errorMessage['shopmanagername'])) {
-                                                            echo $errorMessage['shopmanagername'];
-                                                        }
-                                                        ?>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>Phone Number</th>
-                                                <td>
-                                                    <input class="form-control" type="text" name="phonenumber" value="<?php
-                                                    if (isset($_POST) && isset($_POST['phonenumber'])) {
-                                                        echo $_POST['phonenumber'];
-                                                    }
-                                                    ?>" />
-                                                    <span id="phonenumberError" class="error">
-                                                        <?php
-                                                        if (isset($errorMessage) && isset($errorMessage['phonenumber'])) {
-                                                            echo $errorMessage['phonenumber'];
-                                                        }
-                                                        ?> 
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>Date Opened</th>
-                                                <td>
-                                                    <input class="form-control" type="text" name="dateopened" value="<?php
-                                                    if (isset($_POST) && isset($_POST['dateopened'])) {
-                                                        echo $_POST['dateopened'];
-                                                    }
-                                                    ?>" />
-                                                    <span id="dateopenedError" class="error">
-                                                        <?php
-                                                        if (isset($errorMessage) && isset($errorMessage['dateopened'])) {
-                                                            echo $errorMessage['dateopened'];
-                                                        }
-                                                        ?> 
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>URL Address</th>
-                                                <td>
-                                                    <input class="form-control" type="text" name="url" value="<?php
-                                                    if (isset($_POST) && isset($_POST['url'])) {
-                                                        echo $_POST['url'];
-                                                    }
-                                                    ?>" />
-                                                    <span id="urlError" class="error">
-                                                        <?php
-                                                        if (isset($errorMessage) && isset($errorMessage['url'])) {
-                                                            echo $errorMessage['url'];
-                                                        }
-                                                        ?> 
-                                                    </span>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                            echo '<tr>';
+                                            echo '<th>Region Number</th>'
+                                            . '<td>' . $row['regionnumber'] . '</td>';
+                                            echo '</tr>';
 
-                                            <tr>
-                                                <th>Region Number</th>
-                                                <td>
-                                                    <input class="form-control" type="text" name="regionnumber" value="<?php
-                                                    if (isset($_POST) && isset($_POST['regionnumber'])) {
-                                                        echo $_POST['regionnumber'];
-                                                    }
-                                                    ?>" />
-                                                    <span id="regionnumberError" class="error">
-                                                        <?php
-                                                        if (isset($errorMessage) && isset($errorMessage['regionnumber'])) {
-                                                            echo $errorMessage['regionnumber'];
-                                                        }
-                                                        ?> 
-                                                    </span>
-                                                </td>
-                                            </tr>
+                                            echo '<tr>';
+                                            echo '<th>Region Name</th>'
+                                            . '<td>' . $row['regionname'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Regional Manager</th>'
+                                            . '<td>' . $row['regionalmanager'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Phone Number</th>'
+                                            . '<td>' . $row['phonenumber'] . '</td>';
+                                            echo '</tr>';
+
+                                            echo '<tr>';
+                                            echo '<th>Email</th>'
+                                            . '<td>' . $row['email'] . '</td>';
+                                            echo '</tr>';
+                                            ?>
                                         </tbody>
                                     </table>
-                                    <input class="btn btn-login" type="submit" value="Save" name="createShop" />
-                                    <input class="btn btn-login" type="button" value="Cancel" name="cancel" onclick="document.location.href = 'viewShops.php'" />
                                 </div>
+
+                                <a class="btn btn-login" href="editRegionForm.php?id=<?php echo $row['regionnumber']; ?>">Edit</a>
+                                <a class="deleteShop btn btn-login" href="deleteRegion.php?id=<?php echo $row['regionnumber']; ?>">Delete</a>
+                                <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewRegions.php'" />
+
+
                             </form>
                         </div>
                     </div>
@@ -308,7 +257,6 @@ require 'ensureUserLoggedIn.php';
 
 
 
-        <!-- Footer -->
         <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-fixed-bottom">
             <div class="row">
                 <div class="container">
@@ -342,6 +290,7 @@ require 'ensureUserLoggedIn.php';
 
 
 
+        <script type="text/javascript" src="js/email.js"></script>
         <!-- Javascript -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

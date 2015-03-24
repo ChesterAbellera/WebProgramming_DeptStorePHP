@@ -166,31 +166,39 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Shops</h2></a>
-                                </div>
+                                <a href="viewShops.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/building.svg" class="tableiconsize">
+                                        <h2 class="scribble">Shops</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/userround.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Employees</h2></a>
-                                </div>
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/userround.svg" class="tableiconsize">
+                                        <h2 class="scribble">Employees</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Regions</h2></a>
-                                </div>
+                                <a href="viewRegions.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
+                                        <h2 class="scribble">Regions</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Products</h2></a>
-                                </div>
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/box.svg" class="tableiconsize">
+                                        <h2 class="scribble">Products</h2>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -316,7 +324,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                                     </table>
                                 </div>
                                 <input class="btn btn-login" type="submit" value="Save" name="updateShop"/>
-                                <input class="btn btn-login" type="button" value="Cancel" name="cancel" onclick="document.location.href = 'dashboard.php'" />
+                                <input class="btn btn-login" type="button" value="Cancel" name="cancel" onclick="document.location.href = 'viewShops.php'" />
 
 
                             </form>

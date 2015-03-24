@@ -316,80 +316,40 @@ $statement = $gateway->getShops();
                     <div class="row placeholders text-center">
                         <div class="container-fluid">
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/building.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Shops</h2></a>
-                                </div>
+                                <a href="viewShops.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/building.svg" class="tableiconsize">
+                                        <h2 class="scribble">Shops</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/userround.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Employees</h2></a>
-                                </div>
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/userround.svg" class="tableiconsize">
+                                        <h2 class="scribble">Employees</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/map.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Regions</h2></a>
-                                </div>
+                                <a href="viewRegions.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
+                                        <h2 class="scribble">Regions</h2>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="thumbnail background-grey">
-                                    <a><img src="images/icons/svg/box.svg" class="tableiconsize"></a>
-                                    <a><h2 class="scribble">Products</h2></a>
-                                </div>
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/box.svg" class="tableiconsize">
+                                        <h2 class="scribble">Products</h2>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Shops Table -->
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <h4 class="boldtext">Shops</h4>
-                        <div class="thumbnail background-grey">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Shop ID</th>
-                                            <th>Shop Address</th>
-                                            <th>Shop Manager Name</th>
-                                            <th>Phone Number</th>
-                                            <th>Date Opened</th>
-                                            <th>URL Address</th>
-                                            <th>Region Number</th>
-                                            <th>Options</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <?php
-                                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                                        while ($row) {
-                                            echo '<td>' . $row['shopID'] . '</td>';
-                                            echo '<td>' . $row['address'] . '</td>';
-                                            echo '<td>' . $row['shopmanagername'] . '</td>';
-                                            echo '<td>' . $row['phonenumber'] . '</td>';
-                                            echo '<td>' . $row['dateopened'] . '</td>';
-                                            echo '<td>' . $row['url'] . '</td>';
-                                            echo '<td>' . $row['regionnumber'] . '</td>';
-                                            echo '<td>'
-                                            . '<a href="viewShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-search btn btn-view"></span></button></a> '
-                                            . '<a href="editShopForm.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-cog btn btn-edit"></span></button></a> '
-                                            . '<a class="deleteShop" href="deleteShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-remove btn btn-delete"></span></button></a> '
-                                            . '</td>';
-                                            echo '</tr>';
-
-                                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <a href="createShopForm.php" class="btn btn-latestorders">Create Shop</a>
                         </div>
                     </div>
                 </div>
@@ -400,7 +360,7 @@ $statement = $gateway->getShops();
 
 
         <!-- Footer -->
-        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gappedfooter">
+        <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-fixed-bottom">
             <div class="row">
                 <div class="container">
                     <div class="col-lg-2 col-md-2 col-sm-2 footercontent">
