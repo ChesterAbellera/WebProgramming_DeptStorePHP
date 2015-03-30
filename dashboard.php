@@ -8,10 +8,28 @@ require_once 'ShopTableGateway.php';
 
 require 'ensureUserLoggedIn.php';
 
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("shopid", "address", "shopmanagername", "phonenumber", "dateopened", "url", "regionnumber");
+    if (!in_array($sortOrder, $columnNames)) {
+        $sortOrder = 'shopid';
+    }
+} else {
+    $sortOrder = 'shopid';
+}
+
+if (isset($_GET) && isset($_GET['filterName'])){
+    $filterName = filter_input(INPUT_GET, 'filterName', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+}
+else
+{
+    $filterName = NULL;
+}
+
 $connection = Connection::getInstance();
 $gateway = new ShopTableGateway($connection);
 
-$statement = $gateway->getShops();
+$statement = $gateway->getShops($sortOrder, $filterName);
 ?>
 
 
@@ -87,7 +105,7 @@ $statement = $gateway->getShops();
                             <li>
                                 <form class="navbar-form" role="search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search" name="q">
+                                        <input type="text" class="form-control" placeholder="Search">
                                         <div class="input-group-btn">
                                             <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                                         </div>
@@ -152,6 +170,55 @@ $statement = $gateway->getShops();
 
                 <!-- Main Dashboard Elements -->
                 <div class="col-lg-10 col-md-12">
+                    
+
+                    <!-- Image Row -->
+                    <h4 class="polaroid-grid-4 boldtext">Tables</h4>
+
+                    <div class="row placeholders text-center">
+                        <div class="container-fluid">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <a href="viewShops.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/building.svg" class="tableiconsize">
+                                        <h2 class="scribble">Shops</h2>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/userround.svg" class="tableiconsize">
+                                        <h2 class="scribble">Employees</h2>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <a href="viewRegions.php" class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
+                                        <h2 class="scribble">Regions</h2>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <a class="tablebutton">
+                                    <div class="thumbnail background-grey">
+                                        <img src="images/icons/svg/box.svg" class="tableiconsize">
+                                        <h2 class="scribble">Products</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    <!-- Enquiries, Orders and Calendar -->
                     <div class="row placeholders">
                         <div class="container-fluid">
                             <div class="container-fluid">
@@ -280,75 +347,32 @@ $statement = $gateway->getShops();
                                                     <td class="text-center">11</td>
                                                     <td class="text-center">12</td>
                                                     <td class="text-center">13</td>
-                                                    <td class="text-center">13</td>
                                                     <td class="text-center">14</td>
+                                                    <td class="text-center">15</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-center">15</td>
                                                     <td class="text-center">16</td>
                                                     <td class="text-center">17</td>
                                                     <td class="text-center">18</td>
                                                     <td class="text-center">19</td>
                                                     <td class="text-center">20</td>
                                                     <td class="text-center">21</td>
+                                                    <td class="text-center">22</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-center">21</td>
-                                                    <td class="text-center">22</td>
-                                                    <td class="text-center"><span class="badge badge-paid">23</span></td>
+                                                    <td class="text-center">23</td>
                                                     <td class="text-center">24</td>
-                                                    <td class="text-center">25</td>
+                                                    <td class="text-center"><span class="badge badge-paid">25</span></td>
                                                     <td class="text-center">26</td>
                                                     <td class="text-center">27</td>
+                                                    <td class="text-center">28</td>
+                                                    <td class="text-center">29</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                     <a class="btn btn-latestorders">Create Event / Set Reminder</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Image Row -->
-                    <h4 class="polaroid-grid-4 boldtext">Tables</h4>
-
-                    <div class="row placeholders text-center">
-                        <div class="container-fluid">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <a href="viewShops.php" class="tablebutton">
-                                    <div class="thumbnail background-grey">
-                                        <img src="images/icons/svg/building.svg" class="tableiconsize">
-                                        <h2 class="scribble">Shops</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <a class="tablebutton">
-                                    <div class="thumbnail background-grey">
-                                        <img src="images/icons/svg/userround.svg" class="tableiconsize">
-                                        <h2 class="scribble">Employees</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <a href="viewRegions.php" class="tablebutton">
-                                    <div class="thumbnail background-grey">
-                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
-                                        <h2 class="scribble">Regions</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <a class="tablebutton">
-                                    <div class="thumbnail background-grey">
-                                        <img src="images/icons/svg/box.svg" class="tableiconsize">
-                                        <h2 class="scribble">Products</h2>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                     </div>

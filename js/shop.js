@@ -76,7 +76,7 @@ window.onload = function () {
     }
 
     function deleteLink(event) {
-        if (!confirm("Are you sure you want to delete this shop?")) {
+        if (!confirm("Are you really sure you want to delete this shop?")) {
             event.preventDefault();
         }
     }

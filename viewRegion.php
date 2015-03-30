@@ -41,7 +41,7 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
-        <script type="text/javascript" src="js/shop.js"></script>
+        <script type="text/javascript" src="js/region.js"></script>
     </head>
     <body>
 
@@ -203,7 +203,7 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
                     </div>
 
                     <div class="col-lg-6">
-                        <h4 class="boldtext">Shop Details</h4>
+                        <h4 class="boldtext">Region Details</h4>
                         <div class="thumbnail background-grey">
 
                             <form id="editRegionForm" name="editRegionForm" action="editRegion.php" method="POST">
@@ -244,10 +244,59 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
 
                                 <a class="btn btn-login" href="editRegionForm.php?id=<?php echo $row['regionnumber']; ?>">Edit</a>
                                 <a class="deleteShop btn btn-login" href="deleteRegion.php?id=<?php echo $row['regionnumber']; ?>">Delete</a>
-                                <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewRegions.php'" />
+                                <!-- <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewRegions.php'" /> -->
 
 
                             </form>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h4 class="boldtext">Shops Assigned to <?php echo $row['regionname'];?></h4>
+                        <div class="thumbnail background-grey">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="viewShops.php?sortOrder=shopid">Shop ID</a></th>
+                                            <th><a href="viewShops.php?sortOrder=address">Shop Address</a></th>
+                                            <th><a href="viewShops.php?sortOrder=shopmanagername">Shop Manager Name</a></th>
+                                            <th><a href="viewShops.php?sortOrder=phonenumber">Phone Number</a></th>
+                                            <th><a href="viewShops.php?sortOrder=dateopened">Date Opened</a></th>
+                                            <th><a href="viewShops.php?sortOrder=url">URL Address</a></th>
+                                            <th><a href="viewShops.php?sortOrder=regionnumber">Region Number</a></th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <?php
+                                        $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                        while ($row) {
+                                            echo '<td>' . $row['shopID'] . '</td>';
+                                            echo '<td>' . $row['address'] . '</td>';
+                                            echo '<td>' . $row['shopmanagername'] . '</td>';
+                                            echo '<td>' . $row['phonenumber'] . '</td>';
+                                            echo '<td>' . $row['dateopened'] . '</td>';
+                                            echo '<td>' . $row['url'] . '</td>';
+                                            echo '<td>' . $row['regionnumber'] . '</td>';
+                                            echo '<td>'
+                                            . '<a href="viewShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-search btn btn-view"></span></button></a> '
+                                            . '<a href="editShopForm.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-cog btn btn-edit"></span></button></a> '
+                                            . '<a class="deleteShop" href="deleteShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-remove btn btn-delete"></span></button></a> '
+                                            . '</td>';
+                                            echo '</tr>';
+
+                                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewRegions.php'" />
                         </div>
                     </div>
                 </div>

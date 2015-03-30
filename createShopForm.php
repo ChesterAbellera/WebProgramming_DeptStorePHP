@@ -1,10 +1,35 @@
 <?php
-$id = session_id();
-if ($id == "") {
-    session_start();
-}
+require_once 'Shop.php';
+require_once 'Connection.php';
+require_once 'ShopTableGateway.php';
+
+/* "require_once" means that a stored piece of information 
+  will remain as an output by having to load it just once */
 
 require 'ensureUserLoggedIn.php';
+
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("shopid", "address", "shopmanagername", "phonenumber", "dateopened", "url", "regionnumber");
+    if (!in_array($sortOrder, $columnNames)) {
+        $sortOrder = 'shopid';
+    }
+} else {
+    $sortOrder = 'shopid';
+}
+
+if (isset($_GET) && isset($_GET['filterName'])){
+    $filterName = filter_input(INPUT_GET, 'filterName', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+}
+else
+{
+    $filterName = NULL;
+}
+
+$connection = Connection::getInstance();
+$gateway = new ShopTableGateway($connection);
+
+$statement = $gateway->getShops($sortOrder, $filterName);
 ?>
 
 

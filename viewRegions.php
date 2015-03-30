@@ -8,10 +8,24 @@ require_once 'RegionTableGateway.php';
 
 require 'ensureUserLoggedIn.php';
 
+if (isset($_GET) && isset($_GET['sortOrder']))
+{
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("regionnumber", "regionname", "regionalmanager", "phonenumber", "email");
+    if(!in_array($sortOrder, $columnNames))
+    {
+        $sortOrder = 'regionnumber';
+    }
+}
+else
+{
+    $sortOrder = 'regionnumber';
+}
+
 $connection = Connection::getInstance();
 $gateway = new RegionTableGateway($connection);
 
-$statement = $gateway->getRegions();
+$statement = $gateway->getRegions($sortOrder);
 ?>
 
 
@@ -201,14 +215,14 @@ $statement = $gateway->getRegions();
                         <h4 class="boldtext">Regions</h4>
                         <div class="thumbnail background-grey">
                             <div class="table-responsive">
-                                <table class="table table-striped">
+                                <table class="table table-striped table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Region Number</th>
-                                            <th>Region Name</th>
-                                            <th>Regional Manager</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
+                                            <th><a href="viewRegions.php?sortOrder=regionnumber">Region Number</a></th>
+                                            <th><a href="viewRegions.php?sortOrder=regionname">Region Name</a></th>
+                                            <th><a href="viewRegions.php?sortOrder=regionalmanager">Regional Manager</a></th>
+                                            <th><a href="viewRegions.php?sortOrder=phonenumber">Phone Number</a></th>
+                                            <th><a href="viewRegions.php?sortOrder=email">Email</a></th>
                                             <th>Options</th>
                                         </tr>
                                     </thead>

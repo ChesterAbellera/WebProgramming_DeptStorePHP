@@ -12,9 +12,9 @@ class RegionTableGateway {
 
 
     // METHOD TO CONNECT TO DATABASE AND RETURN THE EXISTING REGIONS
-    public function getRegions() {
+    public function getRegions($sortOrder) {
         // execute a query to get all shops
-        $sqlQuery = "SELECT * FROM region";
+        $sqlQuery = "SELECT * FROM region ORDER BY " .$sortOrder;
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
@@ -110,7 +110,7 @@ class RegionTableGateway {
                 "regionname = :regionname, " .
                 "regionalmanager = :regionalmanager, " .
                 "phonenumber = :phonenumber, " .
-                "email = :email, " .
+                "email = :email " .
                 "WHERE regionnumber = :regionnumber";
 
         $statement = $this->connection->prepare($sqlQuery);

@@ -12,12 +12,27 @@ class ShopTableGateway {
 
 
     // METHOD TO CONNECT TO DATABASE AND RETURN THE EXISTING SHOPS
-    public function getShops() {
-        // execute a query to get all regions
-        $sqlQuery = "SELECT * FROM shops";
+    public function getShops($sortOrder, $filterName) {
+        // execute a query to get all shops
+      
+        
+        $sqlQuery ="SELECT s.*, r.regionname FROM shops s 
+                    LEFT JOIN region r ON r.regionnumber = s.regionnumber " .
+                    (($filterName == NULL) ? "" : "Where s.address LIKE :filterName") .
+                    " ORDER BY " . $sortOrder;
+
+       
         
         $statement = $this->connection->prepare($sqlQuery);
-        $status = $statement->execute();
+        if ($filterName != NULL)
+        {
+            $params = array("filterName" => "%" . $filterName . "%");
+            $status = $statement->execute($params);
+        }
+        else
+        {
+            $status = $statement->execute();
+        }
         
         if (!$status) {
             die("Could not retrieve shops");

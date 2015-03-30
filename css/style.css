@@ -472,7 +472,6 @@ footer
 	border: 2px solid white;
 	font-weight: normal;
 }
-
 .btn-info:hover,
 .btn-info:focus,
 .btn-info:active,
@@ -495,7 +494,6 @@ footer
 	border: 1px solid black;
 	font-weight: normal;
 }
-
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -518,7 +516,6 @@ footer
 	border: 1px solid #20BF9F;
 	font-weight: normal;
 }
-
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -540,7 +537,6 @@ footer
 	border: 1px solid black;
 	font-weight: normal;
 }
-
 .btn-newsletter:hover,
 .btn-newsletter:focus,
 .btn-newsletter:active,
@@ -563,7 +559,6 @@ footer
 	border: 2px solid black;
 	font-weight: normal;
 }
-
 .btn-size:hover,
 .btn-size:focus,
 .btn-size:active,
@@ -586,7 +581,6 @@ footer
   	border: none;
 	font-weight: normal;
 }
-
 .btn-addtocart:hover,
 .btn-addtocart:focus,
 .btn-addtocart:active,
@@ -609,7 +603,6 @@ footer
 	font-weight: normal;
         font-family: 'Josefin Sans', sans-serif;
 }
-
 .btn-login:hover,
 .btn-login:focus,
 .btn-login:active,
@@ -632,7 +625,6 @@ footer
 	border: 1px solid black;
 	font-weight: normal;
 }
-
 .btn-register:hover,
 .btn-register:focus,
 .btn-register:active,
@@ -654,7 +646,6 @@ footer
 	background-color: black;
 	font-weight: normal;
 }
-
 .btn-view:hover,
 .btn-view:focus,
 .btn-view:active,
@@ -672,7 +663,6 @@ footer
 	background-color: #20BF9F;
 	font-weight: normal;
 }
-
 .btn-edit:hover,
 .btn-edit:focus,
 .btn-edit:active,
@@ -690,7 +680,6 @@ footer
 	background-color: #EE3B3B;
 	font-weight: normal;
 }
-
 .btn-delete:hover,
 .btn-delete:focus,
 .btn-delete:active,
@@ -978,6 +967,18 @@ th
     font-family: 'Josefin Sans', sans-serif;
 }
 
+th a
+{
+    color: white !important;
+    font-weight: bold;
+}
+
+th a:hover
+{
+    color: #F49594 !important;
+    font-weight: bold;
+}
+
 td
 {
     font-family: 'Josefin Sans', sans-serif;
@@ -995,7 +996,8 @@ td
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #F49594;
+  color: white;
+  background-color: black;
 }
 
 .thumbnail .btn-login

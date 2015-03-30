@@ -45,6 +45,7 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
+        <script src="js/region.js"></script>
     </head>
     <body>
 

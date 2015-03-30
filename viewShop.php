@@ -257,7 +257,6 @@ $statement = $gateway->getShopByShopId($sID);
                                 <a class="deleteShop btn btn-login" href="deleteShop.php?id=<?php echo $row['shopID']; ?>">Delete</a>
                                 <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewShops.php'" />
 
-
                             </form>
                         </div>
                     </div>

@@ -27,7 +27,7 @@ require 'ensureUserLoggedIn.php';
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
-        <script src="js/region.js"></script>
+        <script type="text/javascript" src="js/region.js"></script>
     </head>
     <body>
 
@@ -182,9 +182,7 @@ require 'ensureUserLoggedIn.php';
                         <h4 class="boldtext">Create Region Form</h4>
                         <div class="thumbnail background-grey">
 
-                            <!-- "form id="shopForm" is used to refer back to the form element 
-                                  in the createShop.js file -->
-                            <form id="createShopForm"
+                            <form id="createRegionForm"
                                   action="createRegion.php" 
                                   method="POST">
                                 <div class="table-responsive">
@@ -193,7 +191,7 @@ require 'ensureUserLoggedIn.php';
                                             <tr>
                                                 <th>Region Name</th>
                                                 <td>
-                                                    <input class="form-control" type="text" name="address" value="<?php
+                                                    <input class="form-control" type="text" name="regionname" value="<?php
                                                     if (isset($_POST) && isset($_POST['regionname'])) {
                                                         echo $_POST['regionname'];
                                                     }

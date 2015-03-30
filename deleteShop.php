@@ -20,5 +20,5 @@ $gateway = new ShopTableGateway($connection);
 
 $gateway->deleteShop($id);
 
-header("Location: dashboard.php");
+header("Location: viewShops.php");
 ?>

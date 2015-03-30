@@ -8,10 +8,28 @@ require_once 'ShopTableGateway.php';
 
 require 'ensureUserLoggedIn.php';
 
+if (isset($_GET) && isset($_GET['sortOrder'])) {
+    $sortOrder = $_GET['sortOrder'];
+    $columnNames = array("shopid", "address", "shopmanagername", "phonenumber", "dateopened", "url", "regionnumber");
+    if (!in_array($sortOrder, $columnNames)) {
+        $sortOrder = 'shopid';
+    }
+} else {
+    $sortOrder = 'shopid';
+}
+
+if (isset($_GET) && isset($_GET['filterName'])){
+    $filterName = filter_input(INPUT_GET, 'filterName', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+}
+else
+{
+    $filterName = NULL;
+}
+
 $connection = Connection::getInstance();
 $gateway = new ShopTableGateway($connection);
 
-$statement = $gateway->getShops();
+$statement = $gateway->getShops($sortOrder, $filterName);
 ?>
 
 
@@ -84,12 +102,18 @@ $statement = $gateway->getShops();
                                     <li><a>Help <span class="glyphicon glyphicon-info-sign"></span></a></a></li>
                                 </ul>
                             </li>
+                            <!-- Filter Box --> 
                             <li>
-                                <form class="navbar-form" role="search">
+                                <form class="navbar-form" role="form" action="viewShops.php?sortOrder=<?php echo $sortOrder; ?>" method="GET">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search" name="q">
+                                        <input class="form-control" 
+                                               type="text" 
+                                               name="filterName"
+                                               id="filterName"
+                                               placeholder="Search"
+                                               value="<?php echo $filterName; ?>" />
                                         <div class="input-group-btn">
-                                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                            <button class="btn btn-default" type="submit" name="filterBtn" id="filterBtn"><i class="glyphicon glyphicon-search"></i></button>
                                         </div>
                                     </div>
                                 </form>
@@ -111,6 +135,11 @@ $statement = $gateway->getShops();
             echo '<p>' . $message . '</p>';
         }
         ?>
+
+
+
+
+
 
 
 
@@ -201,16 +230,16 @@ $statement = $gateway->getShops();
                         <h4 class="boldtext">Shops</h4>
                         <div class="thumbnail background-grey">
                             <div class="table-responsive">
-                                <table class="table table-striped">
+                                <table class="table table-striped table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Shop ID</th>
-                                            <th>Shop Address</th>
-                                            <th>Shop Manager Name</th>
-                                            <th>Phone Number</th>
-                                            <th>Date Opened</th>
-                                            <th>URL Address</th>
-                                            <th>Region Number</th>
+                                            <th><a href="viewShops.php?sortOrder=shopid">Shop ID</a></th>
+                                            <th><a href="viewShops.php?sortOrder=address">Shop Address</a></th>
+                                            <th><a href="viewShops.php?sortOrder=shopmanagername">Shop Manager Name</a></th>
+                                            <th><a href="viewShops.php?sortOrder=phonenumber">Phone Number</a></th>
+                                            <th><a href="viewShops.php?sortOrder=dateopened">Date Opened</a></th>
+                                            <th><a href="viewShops.php?sortOrder=url">URL Address</a></th>
+                                            <th><a href="viewShops.php?sortOrder=regionnumber">Region Number</a></th>
                                             <th>Options</th>
                                         </tr>
                                     </thead>
