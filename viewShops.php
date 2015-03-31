@@ -10,7 +10,7 @@ require 'ensureUserLoggedIn.php';
 
 if (isset($_GET) && isset($_GET['sortOrder'])) {
     $sortOrder = $_GET['sortOrder'];
-    $columnNames = array("shopid", "address", "shopmanagername", "phonenumber", "dateopened", "url", "regionnumber");
+    $columnNames = array("shopid", "address", "shopmanagername", "phonenumber", "dateopened", "url", "regionalmanager");
     if (!in_array($sortOrder, $columnNames)) {
         $sortOrder = 'shopid';
     }
@@ -239,7 +239,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                                             <th><a href="viewShops.php?sortOrder=phonenumber">Phone Number</a></th>
                                             <th><a href="viewShops.php?sortOrder=dateopened">Date Opened</a></th>
                                             <th><a href="viewShops.php?sortOrder=url">URL Address</a></th>
-                                            <th><a href="viewShops.php?sortOrder=regionnumber">Region Number</a></th>
+                                            <th><a href="viewShops.php?sortOrder=regionalmanager">Region Manager</a></th>
                                             <th>Options</th>
                                         </tr>
                                     </thead>
@@ -254,7 +254,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                                             echo '<td>' . $row['phonenumber'] . '</td>';
                                             echo '<td>' . $row['dateopened'] . '</td>';
                                             echo '<td>' . $row['url'] . '</td>';
-                                            echo '<td>' . $row['regionnumber'] . '</td>';
+                                            echo '<td>' . $row['regionalmanager'] . '</td>';
                                             echo '<td>'
                                             . '<a href="viewShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-search btn btn-view"></span></button></a> '
                                             . '<a href="editShopForm.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-cog btn btn-edit"></span></button></a> '

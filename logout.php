@@ -9,4 +9,4 @@ if ($id == "")
 $_SESSION['username'] = NULL;
 unset($_SESSION['username']);
 
-header ("Location: login.php");
+header ("Location: index.php");

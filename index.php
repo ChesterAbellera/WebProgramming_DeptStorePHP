@@ -6,7 +6,6 @@ require_once 'ShopTableGateway.php';
 /* "require_once" means that a stored piece of information 
   will remain as an output by having to load it just once */
 
-require 'ensureUserLoggedIn.php';
 
 if (isset($_GET) && isset($_GET['sortOrder'])) {
     $sortOrder = $_GET['sortOrder'];
@@ -368,54 +367,54 @@ $statement = $gateway->getShops($sortOrder, $filterName);
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel1" data-toggle="modal"><img src="images/travel/travel1.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel1.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel1" data-toggle="modal"><p class="caption">PENNY Floral Nickel Skateboard <strong>$139.99</strong></p></a>
+                            <a><p class="caption">PENNY Floral Nickel Skateboard <strong>$139.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel2" data-toggle="modal"><img src="images/travel/travel2.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel2.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel2" data-toggle="modal"><p class="caption">ARBOR Bamboo Sketch Skateboard <strong>$129.99</strong></p></a>
+                            <a><p class="caption">ARBOR Bamboo Sketch Skateboard <strong>$129.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel3" data-toggle="modal"><img src="images/travel/travel3.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel3.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel3" data-toggle="modal"><p class="caption">ELEMENT Desert Oasis Skateboard <strong>$119.99</strong></p></a>
+                            <a><p class="caption">ELEMENT Desert Oasis Skateboard <strong>$119.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel4" data-toggle="modal"><img src="images/travel/travel4.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel4.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel4" data-toggle="modal"><p class="caption">ELEMENT Spaced Out Skateboard <strong>$98.99</strong></p></a>
+                            <a><p class="caption">ELEMENT Spaced Out Skateboard <strong>$98.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel5" data-toggle="modal"><img src="images/travel/travel5.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel5.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel5" data-toggle="modal"><p class="caption">REAL Retro Bit Skateboard <strong>$109.99</strong></p></a>
+                            <a><p class="caption">REAL Retro Bit Skateboard <strong>$109.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 				
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel6" data-toggle="modal"><img src="images/travel/travel6.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel6.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel6" data-toggle="modal"><p class="caption">GLOBE Banshee Skateboard <strong>$116.99</strong></p></a>
+                            <a><p class="caption">GLOBE Banshee Skateboard <strong>$116.99</strong></p></a>
                         </div>
                     </div>
                 </div>
@@ -423,54 +422,54 @@ $statement = $gateway->getShops($sortOrder, $filterName);
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel7" data-toggle="modal"><img src="images/travel/travel7.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel7.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel7" data-toggle="modal"><p class="caption">Leader KAGERO 2015 <strong>$849.99</strong></p></a>
+                            <a><p class="caption">Leader KAGERO 2015 <strong>$849.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel8" data-toggle="modal"><img src="images/travel/travel8.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel8.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel8" data-toggle="modal"><p class="caption">Leader RENOVATIO <strong>$849.99</strong></p></a>
+                            <a><p class="caption">Leader RENOVATIO <strong>$849.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel9" data-toggle="modal"><img src="images/travel/travel9.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel9.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel9" data-toggle="modal"><p class="caption">FSA Carbon Pro Track Crankset <strong>$300.00</strong></p></a>
+                            <a><p class="caption">FSA Carbon Pro Track Crankset <strong>$300.00</strong></p></a>
                         </div>
                     </div>
                 </div>
 				
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel10" data-toggle="modal"><img src="images/travel/travel10.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel10.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel10" data-toggle="modal"><p class="caption">Full Windsor Nutter Multi-Tool <strong>$39.99</strong></p></a>
+                            <a"><p class="caption">Full Windsor Nutter Multi-Tool <strong>$39.99</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel11" data-toggle="modal"><img src="images/travel/travel11.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel11.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel11" data-toggle="modal"><p class="caption">Restrap Loader Messenger Bag (24L) <strong>$46.00</strong></p></a>
+                            <a><p class="caption">Restrap Loader Messenger Bag (24L) <strong>$46.00</strong></p></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
-                        <a href="#travel12" data-toggle="modal"><img src="images/travel/travel12.jpg" class="img-responsive"></a>
+                        <a><img src="images/travel/travel12.jpg" class="img-responsive"></a>
                         <div class="polaroid-grid-3">
-                            <a href="#travel12" data-toggle="modal"><p class="caption">Restrap Loader Messenger Bag (30L) <strong>$54.50</strong></p></a>
+                            <a><p class="caption">Restrap Loader Messenger Bag (30L) <strong>$54.50</strong></p></a>
                         </div>
                     </div>
                 </div>
@@ -525,8 +524,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 			
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <div class="thumbnail noborder">
-                        <a href="#brea" data-toggle="modal"><img src="images/crew/brea1.jpg" class="img img-circle img-responsive polaroid-grid-4 
-					crewicon"></a>
+                        <a href="#brea" data-toggle="modal"><img src="images/crew/brea1.jpg" class="img img-circle img-responsive polaroid-grid-4 crewicon"></a>
                         <a href="#brea" data-toggle="modal"><h2 class="scribble text-center crewname">Brea Grant</h2></a>
                         <div class="polaroid-grid-3">
                             <p class="caption">
@@ -540,8 +538,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <div class="thumbnail noborder">
-                        <a href="#zac" data-toggle="modal"><img src="images/crew/zac1.jpg" class="img img-circle img-responsive polaroid-grid-4 
-					crewicon"></a>
+                        <a href="#zac" data-toggle="modal"><img src="images/crew/zac1.jpg" class="img img-circle img-responsive polaroid-grid-4 crewicon"></a>
                         <a href="#zac" data-toggle="modal"><h2 class="scribble text-center crewname">Zac Farro</h2></a>
                         <div class="polaroid-grid-3">
                             <p class="caption">
@@ -655,7 +652,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 
         <!-- Popular Item 1 Modal Pop-Up -->
         <div id="pop1" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Floral Summer Dress</h1>
@@ -677,13 +674,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- Popular Item 2 Modal Pop-Up -->
         <div id="pop2" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Baseball Passion Long Sleeve</h1>
@@ -705,13 +703,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- Popular Item 3 Modal Pop-Up -->
         <div id="pop3" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Round/Gold/Vintage Shades</h1>
@@ -727,13 +726,13 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
                 </div>
             </div>
         </div>
         <!-- Popular Item 4 Modal Pop-Up -->
         <div id="pop4" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Grey/Black Striped Cardigan</h1>
@@ -755,13 +754,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- Popular Item 5 Modal Pop-Up -->
         <div id="pop5" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Grey Peep Toe Slingbacks</h1>
@@ -771,30 +771,31 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <small>"Grey Peep Toe Slingbacks" Designed by <b>Eleanor Douglas</b></small>
                     <hr>
 
-                    <div class="col-lg-7 sizeandtype">
-                        <label class="inline"><small>Size: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="Women's Sizes">
-                                        <option>Women's 7</option>
-                                        <option>Women's 8</option>
-                                        <option>Women's 9</option>
-                                        <option>Women's 10</option>
-                                        <option>Women's 11</option>
-                                    </optgroup>
-                                </select>
-                                </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 sizeandtype">
+                        <label class="inline"><small>Size: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="Women's Sizes">
+                                <option>Women's 7</option>
+                                <option>Women's 8</option>
+                                <option>Women's 9</option>
+                                <option>Women's 10</option>
+                                <option>Women's 11</option>
+                            </optgroup>
+                        </select>
+                    </div>
 
-                                <p class="inline cutprice">$45.99</p> <p><strong>$31.99</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <p class="inline cutprice">$45.99</p> <p><strong>$31.99</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
+                </div>
+            </div>
+        </div>
         <!-- Popular Item 6 Modal Pop-Up -->
         <div id="pop6" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Black Beach Low-Cuts</h1>
@@ -804,41 +805,42 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <small>"Black Beach Low-Cuts" Designed by <b>Park Sheridan</b></small>
                     <hr>
 
-                    <div class="col-lg-7 sizeandtype">
-                        <label class="inline"><small>Size: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="Men's Sizes">
-                                        <option>Men's 9</option>
-                                        <option>Men's 10</option>
-                                        <option>Men's 11</option>
-                                        <option>Men's 12</option>
-                                        <option>Men's 13</option>
-                                    </optgroup>
-                                    <optgroup label="Women's Sizes">
-                                        <option>Women's 7</option>
-                                        <option>Women's 8</option>
-                                        <option>Women's 9</option>
-                                        <option>Women's 10</option>
-                                        <option>Women's 11</option>
-                                    </optgroup>
-                                </select>
-                                </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 sizeandtype">
+                        <label class="inline"><small>Size: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="Men's Sizes">
+                                <option>Men's 9</option>
+                                <option>Men's 10</option>
+                                <option>Men's 11</option>
+                                <option>Men's 12</option>
+                                <option>Men's 13</option>
+                            </optgroup>
+                            <optgroup label="Women's Sizes">
+                                <option>Women's 7</option>
+                                <option>Women's 8</option>
+                                <option>Women's 9</option>
+                                <option>Women's 10</option>
+                                <option>Women's 11</option>
+                            </optgroup>
+                        </select>
+                    </div>
 
-                                <p class="cutprice">$29.99</p> <p><strong>$26.99</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <p class="cutprice">$29.99</p> <p><strong>$26.99</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
+                </div>
+            </div>
+        </div>
 	
 	
 	
 	
         <!-- New Item 1 Modal Pop-Up -->
         <div id="new1" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Light Sunset Overshirt</h1>
@@ -860,13 +862,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- New Item 2 Modal Pop-Up -->
         <div id="new2" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Leather Army Zip Jacket</h1>
@@ -888,13 +891,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- New Item 3 Modal Pop-Up -->
         <div id="new3" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Cream Navy Wintercoat</h1>
@@ -916,13 +920,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- New Item 4 Modal Pop-Up -->
         <div id="new4" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Burgundy Pattern Sweater</h1>
@@ -944,13 +949,14 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
                 </div>
             </div>
         </div>
         <!-- New Item 5 Modal Pop-Up -->
         <div id="new5" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Dye-Cast Low-Cuts</h1>
@@ -960,30 +966,32 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <small>"Dye-Cast Low-Cuts" Designed by <b>Brea Grant</b></small>
                     <hr>
 
-                    <div class="col-lg-7 sizeandtype">
-                        <label class="inline"><small>Size: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="Women's Sizes">
-                                        <option>Women's 7</option>
-                                        <option>Women's 8</option>
-                                        <option>Women's 9</option>
-                                        <option>Women's 10</option>
-                                        <option>Women's 11</option>
-                                    </optgroup>
-                                </select>
-                                </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 sizeandtype">
+                        <label class="inline"><small>Size: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="Women's Sizes">
+                                <option>Women's 7</option>
+                                <option>Women's 8</option>
+                                <option>Women's 9</option>
+                                <option>Women's 10</option>
+                                <option>Women's 11</option>
+                            </optgroup>
+                        </select>
+                    </div>
 
-                                <p><strong>$26.99</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <p><strong>$26.99</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                    <p class="divider inline text-center">|</p>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-edit"></span> Request a Reprint</a>
+                </div>
+            </div>
+        </div>
         <!-- New Item 6 Modal Pop-Up -->
         <div id="new6" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Brown Messenger Bag</h1>
@@ -999,7 +1007,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
                 </div>
             </div>
         </div>
@@ -1009,7 +1017,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 
         <!-- Photography Item 1 Modal Pop-Up -->
         <div id="photography1" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Instant Mini 8 Camera</h1>
@@ -1019,30 +1027,30 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <p>Make sharp, saturated, credit card-sized photos that develop instantly!</p>
                     <hr>
 
-                    <div class="col-lg-5 sizeandtype">
-                        <label class="inline"><small>Colour: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="Pick a colour!">
-                                        <option>White</option>
-                                        <option>Black</option>
-                                        <option>Sky Blue</option>
-                                        <option>Avocado</option>
-                                        <option>Vintage Pink</option>
-                                        <option>Sunset Yellow</option>
-                                    </optgroup>
-                                </select>
-                                </div>
-                                <p class="cutprice">$129.99</p> <p><strong>$95.00</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 sizeandtype">
+                        <label class="inline"><small>Colour: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="Pick a colour!">
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Sky Blue</option>
+                                <option>Avocado</option>
+                                <option>Vintage Pink</option>
+                                <option>Sunset Yellow</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <p class="cutprice">$129.99</p> <p><strong>$95.00</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                </div>
+            </div>
+        </div>
         <!-- Photography Item 2 Modal Pop-Up -->
         <div id="photography2" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Instant Photo Lab</h1>
@@ -1056,13 +1064,13 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
                 </div>
             </div>
         </div>
         <!-- Photography Item 3 Modal Pop-Up -->
         <div id="photography3" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Instant Film (20 Pack)</h1>
@@ -1072,32 +1080,32 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <p>Film for Polaroid 600 and SX70 cameras</p>
                     <hr>
 
-                    <div class="col-lg-5 sizeandtype">
-                        <label class="inline"><small>Film Type: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="Pick a colour!">
-                                        <option>White Border</option>
-                                        <option>Black Border</option>
-                                        <option>Blue Border</option>
-                                        <option>Red Border</option>
-                                        <option>Green Border</option>
-                                        <option>Pink Border</option>
-                                        <option>Yellow Border</option>
-                                        <option>No Border</option>
-                                    </optgroup>
-                                </select>
-                                </div>
-                                <p><strong>$23.50</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 sizeandtype">
+                        <label class="inline"><small>Film Type: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="Pick a colour!">
+                                <option>White Border</option>
+                                <option>Black Border</option>
+                                <option>Blue Border</option>
+                                <option>Red Border</option>
+                                <option>Green Border</option>
+                                <option>Pink Border</option>
+                                <option>Yellow Border</option>
+                                <option>No Border</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <p><strong>$23.50</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                </div>
+            </div>
+        </div>
         <!-- Photography Item 4 Modal Pop-Up -->
         <div id="photography4" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Instant Camera iPhone Decal</h1>
@@ -1107,28 +1115,28 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <p>An easy to apply decal that turns your iPhone into analog awesome!</p>
                     <hr>
 
-                    <div class="col-lg-5 sizeandtype">
-                        <label class="inline"><small>Sticker Size: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="iPhone Sticker Sizes">
-                                        <option>iPhone 3</option>
-                                        <option>iPhone 4</option>
-                                        <option>iPhone 5</option>
-                                        <option>iPhone 6</option>
-                                    </optgroup>
-                                </select>
-                                </div>
-                                <p class="cutprice">$6.00</p> <p><strong>$3.00</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 sizeandtype">
+                        <label class="inline"><small>Sticker Size: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="iPhone Sticker Sizes">
+                                <option>iPhone 3</option>
+                                <option>iPhone 4</option>
+                                <option>iPhone 5</option>
+                                <option>iPhone 6</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <p class="cutprice">$6.00</p> <p><strong>$3.00</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                </div>
+            </div>
+        </div>
         <!-- Photography Item 5 Modal Pop-Up -->
         <div id="photography5" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Charging Cable Keychain</h1>
@@ -1138,28 +1146,28 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <p>A cute fashion statement with a hidden charging cable inside!</p>
                     <hr>
 
-                    <div class="col-lg-5 sizeandtype">
-                        <label class="inline"><small>Colour: </small><label>
-                                <select class="selectpicker form-control input-sm">
-                                    <optgroup label="Pick a Colour!">
-                                        <option>Orange</option>
-                                        <option>Avocado</option>
-                                        <option>Sky Blue</option>
-                                        <option>Vintage Pink</option>
-                                    </optgroup>
-                                </select>
-                                </div>
-                                <p class="cutprice">$65.00</p> <p><strong>$59.99</strong></p>
-                                <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
-                                </div>
-                                </div>
-                                </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 sizeandtype">
+                        <label class="inline"><small>Colour: </small></label>
+                        <select class="selectpicker form-control input-sm">
+                            <optgroup label="Pick a Colour!">
+                                <option>Orange</option>
+                                <option>Avocado</option>
+                                <option>Sky Blue</option>
+                                <option>Vintage Pink</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <p class="cutprice">$65.00</p> <p><strong>$59.99</strong></p>
+                    <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
+                </div>
+                <div class="modal-footer">
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
+                </div>
+            </div>
+        </div>
         <!-- Photography Item 6 Modal Pop-Up -->
         <div id="photography6" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Gee-Whiz Phone Projector</h1>
@@ -1173,13 +1181,13 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
                 </div>
             </div>
         </div>
         <!-- Photography Item 7 Modal Pop-Up -->
         <div id="photography7" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Cable Caddy</h1>
@@ -1193,13 +1201,13 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
                 </div>
             </div>
         </div>
         <!-- Photography Item 8 Modal Pop-Up -->
         <div id="photography8" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog text-center">
                 <div class="modal-header">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Plaid Camera Satchel</h1>
@@ -1213,7 +1221,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <a class="a.btn btn-addtocart btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> <small>Add to Cart</small></a>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
+                    <a class="wishlist text-center"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</a>
                 </div>
             </div>
         </div>
@@ -1227,7 +1235,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
         <!-- Courtney's Modal Pop-Up -->
         <div id="courtney" class="modal fade" tabindex="-1">
             <div class="modal-dialog">
-                <div class="modal-header">
+                <div class="modal-header text-center">
                     <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
                     <h1>Courtney Andrews</h1>
                 </div>
@@ -1247,9 +1255,6 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <p class="loves"><b>Courtney Loves:</b></h3> <p><i>"Vanilla Hot Chocolate, Star Wars marathons, 
                             reading and Friday Night Jam Sessions."</i></p>
                     <p class="hates"><b>Courtney Hates:</b></h3> <p><i>"Horror movies, Two and a Half Men and books with bad endings."</i></p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
                 </div>
             </div>
         </div>
@@ -1277,9 +1282,6 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                             and eating breakfast food for dinner."</i></p>
                     <p class="hates"><b>Brea Hates:</b></h3> <p><i>"Artist's block, techno 
                             and when markers run dry halfway through a sketch."</i></p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
                 </div>
             </div>
         </div>
@@ -1309,9 +1311,6 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                             and getting Chipotle burritos for lunch."</i></p>
                     <p class="hates"><b>Zac Hates:</b></h3> <p><i>"The Big Bang Theory, coffee stains, public restrooms 
                             and when <b>Courtney</b> steals the guitar."</i></p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Back</button>
                 </div>
             </div>
         </div>

@@ -779,6 +779,20 @@ footer
 	text-decoration: line-through;
 }
 
+.wishlist
+{
+    color: black;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wishlist:hover
+{
+    color: #F49594
+}
+
 .loves
 {
 	color: #20BF9F;
@@ -787,6 +801,11 @@ footer
 .hates
 {
 	color: #F49594;
+}
+
+.modal-footer
+{
+    text-align: center;
 }
 /* -------------------- */
 
