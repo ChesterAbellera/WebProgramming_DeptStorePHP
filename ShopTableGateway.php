@@ -48,30 +48,8 @@ class ShopTableGateway {
         return $statement;
     }
     
-    
-    // METHOD TO CONNECT TO DATABASE AND RETURN THE EXISTING SHOPS
-    public function getShopsByRegionNumber($regionnumber) {
-        // execute a query to get all shops
 
 
-        $sqlQuery = "SELECT s.*, r.regionalmanager AS regionalmanager
-                    FROM shops s 
-                    LEFT JOIN region r ON r.regionnumber = s.regionnumber
-                    WHERE s.regionalmanager = :regionnumber";
-
-        $params = array(
-            'regionnumber' => $regionnumber
-        );
-        $statement = $this->connection->prepare($sqlQuery);
-        $status = $statement->execute($params);
-
-
-        if (!$status) {
-            die("Could not retrieve shops");
-        }
-
-        return $statement;
-    }
 
     // GETSHOPBYSHOPID METHOD
     public function getShopByShopId($sID) {

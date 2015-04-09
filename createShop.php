@@ -36,26 +36,26 @@ $regionnumber = filter_input(INPUT_POST, 'regionnumber', FILTER_SANITIZE_STRING)
   by using conditions such as "if" statements */
 $errorMessage = array();
 if ($address === FALSE || $address === '') {
-    $errorMessage['address'] = '* Hey, you forgot to fill in the Shop Address! Try it again!<br/>';
+    $errorMessage['address'] = '* Hey, you forgot to fill in the Shop Address!<br/>';
 }
 
 if ($shopmanagername === FALSE || $shopmanagername === '') {
-    $errorMessage['shopmanagername'] = '* Hey, you forgot to fill in the name of your Shop Manager! Try it again!<br/>';
+    $errorMessage['shopmanagername'] = '* Hey, you forgot to fill in the name of your Shop Manager!<br/>';
 }
 
 if ($phonenumber === FALSE || $phonenumber === '') {
-    $errorMessage['phonenumber'] = '* Hey, you forgot to fill in your Shop Phone Number! Try it again!<br/>';
+    $errorMessage['phonenumber'] = '* Hey, you forgot to fill in your Shop Phone Number!<br/>';
 }
 
 if ($dateopened === FALSE || $dateopened === '') {
-    $errorMessage['dateopened'] = '* Hey, you forgot to fill in when the Shop was opened! Try it again!<br/>';
+    $errorMessage['dateopened'] = '* Hey, you forgot to fill in when the Shop was opened!<br/>';
 }
 
 if ($url === FALSE || $url === '') {
-    $errorMessage['url'] = '* Hey, you forgot to fill in the Url Address of your shop! Try it again!<br/>';
+    $errorMessage['url'] = '* Hey, you forgot to fill in the Url Address of your shop!<br/>';
 }
 if ($regionnumber === FALSE || $regionnumber === '') {
-    $errorMessage['regionnumber'] = '* Hey, you forgot to fill in the Region Number of your shop! Try it again!<br/>';
+    $errorMessage['regionnumber'] = '* Hey, you forgot to fill in the Region Number associated with your shop!<br/>';
 }
 /* ---------------------------------------------------------------------------- */
 /*if (!isset($_SESSION['shops'])) {

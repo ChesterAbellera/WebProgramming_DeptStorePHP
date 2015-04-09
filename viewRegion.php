@@ -27,7 +27,7 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shiny!</title>
+        <title>Dashboard | View Region</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
@@ -41,7 +41,7 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
         <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
 
         <script src="js/respond.js"></script>
-        <script type="text/javascript" src="js/region.js"></script>
+        <script src="js/region.js"></script>
     </head>
     <body>
 
@@ -78,8 +78,11 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
                             </li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Messages <span class="glyphicon glyphicon-comment"></span> <span class="badge">3</span> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>Inbox <span class="glyphicon glyphicon-inbox"></span> <span class="badge">3</span></a></a></li>
+                                    <li><a>Compose <span class="glyphicon glyphicon-pencil"></span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a>Inbox <span class="glyphicon glyphicon-inbox"></span> <span class="badge">3</span></a></li>
                                     <li><a>Sent <span class="glyphicon glyphicon-send"></span></a></li>
+                                    <li><a>Folders <span class="glyphicon glyphicon-folder-open"></span></a></li>
                                     <li class="divider"></li>
                                     <li><a>Trash <span class="glyphicon glyphicon-trash"></span></a></li>
                                 </ul>
@@ -172,21 +175,21 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
                                     </div>
                                 </a>
                             </div>
+                            
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <a href="viewRegions.php" class="tablebutton">
+                                    <div class="thumbnail background-grey activedashtable">
+                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
+                                        <h2 class="scribble">Regions</h2>
+                                    </div>
+                                </a>
+                            </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
                                 <a class="tablebutton">
                                     <div class="thumbnail background-grey">
                                         <img src="images/icons/svg/userround.svg" class="tableiconsize">
                                         <h2 class="scribble">Employees</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <a href="viewRegions.php" class="tablebutton">
-                                    <div class="thumbnail background-grey">
-                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
-                                        <h2 class="scribble">Regions</h2>
                                     </div>
                                 </a>
                             </div>
@@ -251,54 +254,6 @@ $statement = $gateway->getRegionByRegionNumber($regionnumber);
                         </div>
                     </div>
                     
-                    
-                    
-                    
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <h4 class="boldtext">Shops Assigned to <?php echo $row['regionname'];?></h4>
-                        <div class="thumbnail background-grey">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th><a href="viewShops.php?sortOrder=shopid">Shop ID</a></th>
-                                            <th><a href="viewShops.php?sortOrder=address">Shop Address</a></th>
-                                            <th><a href="viewShops.php?sortOrder=shopmanagername">Shop Manager Name</a></th>
-                                            <th><a href="viewShops.php?sortOrder=phonenumber">Phone Number</a></th>
-                                            <th><a href="viewShops.php?sortOrder=dateopened">Date Opened</a></th>
-                                            <th><a href="viewShops.php?sortOrder=url">URL Address</a></th>
-                                            <th><a href="viewShops.php?sortOrder=regionnumber">Region Number</a></th>
-                                            <th>Options</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <?php
-                                        $row = $statement->fetch(PDO::FETCH_ASSOC);
-                                        while ($row) {
-                                            echo '<td>' . $row['shopID'] . '</td>';
-                                            echo '<td>' . $row['address'] . '</td>';
-                                            echo '<td>' . $row['shopmanagername'] . '</td>';
-                                            echo '<td>' . $row['phonenumber'] . '</td>';
-                                            echo '<td>' . $row['dateopened'] . '</td>';
-                                            echo '<td>' . $row['url'] . '</td>';
-                                            echo '<td>' . $row['regionnumber'] . '</td>';
-                                            echo '<td>'
-                                            . '<a href="viewShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-search btn btn-view"></span></button></a> '
-                                            . '<a href="editShopForm.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-cog btn btn-edit"></span></button></a> '
-                                            . '<a class="deleteShop" href="deleteShop.php?id=' . $row['shopID'] . '"><button span class = "glyphicon glyphicon-remove btn btn-delete"></span></button></a> '
-                                            . '</td>';
-                                            echo '</tr>';
-
-                                            $row = $statement->fetch(PDO::FETCH_ASSOC);
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <input class="btn btn-login" type="button" value="Go Back" name="cancel" onclick="document.location.href = 'viewRegions.php'" />
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ require 'ensureUserLoggedIn.php';
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Shiny!</title>
+        <title>Dashboard | Create Region Form</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
@@ -63,8 +63,11 @@ require 'ensureUserLoggedIn.php';
                             </li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown">Messages <span class="glyphicon glyphicon-comment"></span> <span class="badge">3</span> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a>Inbox <span class="glyphicon glyphicon-inbox"></span> <span class="badge">3</span></a></a></li>
+                                    <li><a>Compose <span class="glyphicon glyphicon-pencil"></span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a>Inbox <span class="glyphicon glyphicon-inbox"></span> <span class="badge">3</span></a></li>
                                     <li><a>Sent <span class="glyphicon glyphicon-send"></span></a></li>
+                                    <li><a>Folders <span class="glyphicon glyphicon-folder-open"></span></a></li>
                                     <li class="divider"></li>
                                     <li><a>Trash <span class="glyphicon glyphicon-trash"></span></a></li>
                                 </ul>
@@ -150,19 +153,19 @@ require 'ensureUserLoggedIn.php';
                             </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-3">
+                                <a href="viewRegions.php" class="tablebutton">
+                                    <div class="thumbnail background-grey activedashtable">
+                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
+                                        <h2 class="scribble">Regions</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <a class="tablebutton">
                                     <div class="thumbnail background-grey">
                                         <img src="images/icons/svg/userround.svg" class="tableiconsize">
                                         <h2 class="scribble">Employees</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <a href="viewRegions.php" class="tablebutton">
-                                    <div class="thumbnail background-grey">
-                                        <img src="images/icons/svg/map.svg" class="tableiconsize">
-                                        <h2 class="scribble">Regions</h2>
                                     </div>
                                 </a>
                             </div>

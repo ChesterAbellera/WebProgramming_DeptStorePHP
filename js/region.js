@@ -23,16 +23,16 @@ window.onload = function () {
         var errors = new Object();
 
         if (regionname === "") {
-            errors["regionname"] = "* Hey, you forgot to fill in the shop address! Try it again!\n";
+            errors["regionname"] = "* Hey, you forgot to fill in the Region Name\n";
         }
         if (regionalmanager === "") {
-            errors["regionalmanager"] = "* Hey, you forgot to fill in the name of your shop manager! Try it again!\n";
+            errors["regionalmanager"] = "* Hey, you forgot to fill in the Regional Manager!\n";
         }
         if (phonenumber === "") {
-            errors["phonenumber"] = "* Hey, you forgot to fill in your shop mobile number! Try it again!\n";
+            errors["phonenumber"] = "* Hey, you forgot to fill in the Region Phone Number!\n";
         }
         if (email === "") {
-            errors["email"] = "* Hey, you forgot to fill in when the shop was opened! Try it again!\n";
+            errors["email"] = "* Hey, you forgot to fill in the Email form!\n";
         }
 
         var valid = true;
@@ -45,7 +45,7 @@ window.onload = function () {
         if (!valid) {
             event.preventDefault();
         }    
-        else if (!confirm("Save ?")) {
+        else if (!confirm("Proceed ?")) {
             event.preventDefault();
         }
     }

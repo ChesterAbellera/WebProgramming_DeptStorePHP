@@ -23,7 +23,7 @@ $emailaddress = filter_input(INPUT_POST, 'emailaddress', FILTER_SANITIZE_STRING)
    by using conditions such as "if" statements */
 $errorMessage = array();
 if ($emailaddress === FALSE || $emailaddress === '') {
-    $errorMessage['emailaddress'] = '* Hey! You forgot to type in your username!<br/>';
+    $errorMessage['emailaddress'] = '* Pssst! You forgot to type in your username!<br/>';
 }
 /*----------------------------------------------------------------------------*/
 

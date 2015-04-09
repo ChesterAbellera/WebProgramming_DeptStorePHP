@@ -25,22 +25,22 @@ window.onload = function () {
         var errors = new Object();
 
         if (address === "") {
-            errors["address"] = "* Hey, you forgot to fill in the shop address! Try it again!\n";
+            errors["address"] = "* Hey, you forgot to fill in the Shop Address!\n";
         }
         if (shopmanagername === "") {
-            errors["shopmanagername"] = "* Hey, you forgot to fill in the name of your shop manager! Try it again!\n";
+            errors["shopmanagername"] = "* Hey, you forgot to fill in the name of your Shop Manager!\n";
         }
         if (phonenumber === "") {
-            errors["phonenumber"] = "* Hey, you forgot to fill in your shop mobile number! Try it again!\n";
+            errors["phonenumber"] = "* Hey, you forgot to fill in your Shop Phone Number!\n";
         }
         if (dateopened === "") {
-            errors["dateopened"] = "* Hey, you forgot to fill in when the shop was opened! Try it again!\n";
+            errors["dateopened"] = "* Hey, you forgot to fill in when the shop was opened!\n";
         }
         if (url === "") {
-            errors["url"] = "* Hey, you forgot to fill in the url address of your shop! Try it again!\n";
+            errors["url"] = "* Hey, you forgot to fill in the Url Address of your shop!\n";
         }
         if (regionnumber === "") {
-            errors["regionnumber"] = "* Hey, you forgot to fill in the region nmber of your shop! Try it again!\n";
+            errors["regionnumber"] = "* Hey, you forgot to fill in the Region Number associated with your shop!\n";
         }
 
         var valid = true;
@@ -53,7 +53,7 @@ window.onload = function () {
         if (!valid) {
             event.preventDefault();
         }    
-        else if (!confirm("Save ?")) {
+        else if (!confirm("Proceed ?")) {
             event.preventDefault();
         }
     }

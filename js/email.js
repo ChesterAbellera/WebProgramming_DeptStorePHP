@@ -10,7 +10,7 @@ function validateEmail(event) {
     var errors = new Object();
 
     if (emailaddress === "") {
-        errors["emailaddress"] = "* Oh no, You left this e-mail field empty!\n";
+        errors["emailaddress"] = "* Pssst! You forgot to type in your username!\n";
     }
     
     var valid = true;

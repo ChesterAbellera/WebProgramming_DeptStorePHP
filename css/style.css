@@ -1093,5 +1093,19 @@ td
 {
     color: #F49594;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #F49594;
+}
+
+.activedashtable
+{
+    color: #20BF9F;
+    background-color: white;
+    border: 1px solid #20BF9F;
+}
+
+.activedashtable:hover
+{
+    color: #20BF9F !important;
+    background-color: white;
+    border: 1px solid #20BF9F !important;
 }

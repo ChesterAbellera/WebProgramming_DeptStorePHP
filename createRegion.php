@@ -34,22 +34,22 @@ $email= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
   by using conditions such as "if" statements */
 $errorMessage = array();
 if ($regionname === FALSE || $regionname === '') {
-    $errorMessage['regionname'] = '* Hey, you forgot to fill in the Region Name! Try it again!<br/>';
+    $errorMessage['regionname'] = '* Hey, you forgot to fill in the Region Name!<br/>';
 }
 
 $errorMessage = array();
 if ($regionalmanager === FALSE || $regionalmanager === '') {
-    $errorMessage['regionalmanager'] = '* Hey, you forgot to fill in the Regional Manager! Try it again!<br/>';
+    $errorMessage['regionalmanager'] = '* Hey, you forgot to fill in the Regional Manager!<br/>';
 }
 
 $errorMessage = array();
 if ($phonenumber === FALSE || $phonenumber === '') {
-    $errorMessage['phonenumber'] = '* Hey, you forgot to fill in the Phone Number! Try it again!<br/>';
+    $errorMessage['phonenumber'] = '* Hey, you forgot to fill in the Region Phone Number!<br/>';
 }
 
 $errorMessage = array();
 if ($email === FALSE || $email === '') {
-    $errorMessage['email'] = '* Hey, you forgot to fill in the Email form! Try it again!<br/>';
+    $errorMessage['email'] = '* Hey, you forgot to fill in the Email form!<br/>';
 }
 /* ---------------------------------------------------------------------------- */
 /*if (!isset($_SESSION['shops'])) {
