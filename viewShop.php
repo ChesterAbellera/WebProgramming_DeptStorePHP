@@ -38,7 +38,7 @@ $statement = $gateway->getShopByShopId($sID);
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
-        <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/924d95fa7611519367e59af1577475fb/favicon.ico" />
 
         <script src="js/respond.js"></script>
         <script type="text/javascript" src="js/shop.js"></script>
@@ -147,7 +147,7 @@ $statement = $gateway->getShopByShopId($sID);
                         $username = $_SESSION ['username'];
                         echo '<p class="greetings">Logged in as : ' . $username . '</p>';
                         ?>
-                        <li><h2 class="scribble">Quicktips :</h2></li>
+                        <li><h2 class="normalfont">Quicktips :</h2></li>
                         <li><a><img src="images/icons/svg/create.svg" class="adminoptionicons"> Create</a></li>
                         <li><a><img src="images/icons/svg/view.svg" class="adminoptionicons"> View</a></li>
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>

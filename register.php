@@ -13,7 +13,7 @@
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
-        <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/924d95fa7611519367e59af1577475fb/favicon.ico" />
     </head>
     <body>
 

@@ -696,20 +696,33 @@ footer
 
 
 /* Misc. Style Codes */
+.crew_hr
+{
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+
 .scribble
 {
-	font-family: 'Reenie Beanie', cursive;
+    font-family: 'Reenie Beanie', cursive;
 }
 
 .bigscribble
 {
-	font-family: 'Reenie Beanie', cursive;
-	font-size: 50px;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 50px;
 }
 
 .loginheaderscribble
 {
-	font-size: 65px;
+    font-size: 65px;
+}
+
+.normalfont
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .boldtext
@@ -719,28 +732,28 @@ footer
 
 .inline
 {
-	display: inline;
+    display: inline;
 }
 
 .nopadding
 {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .badge
 {
-	background-color: #F49594;
+    background-color: #F49594;
 }
 
 .usericon
 {
-	height: 90px;
-	width: 90px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-        margin-top: -40px;
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: -40px;
 }
 
 .greetings
@@ -906,7 +919,7 @@ select
 /* Login */
 .loginbackground
 {
-	background-image: url(../images/blurrycitylights.jpg);
+	background-image: url(../images/thelumineersdarkgreen.jpg);
 	background-repeat: no-repeat;
 	min-height: 929px;
 	color: black;
@@ -959,7 +972,7 @@ select
 /* Register */
 .registerbackground
 {
-	background-image: url(../images/blurrycitylights.jpg);
+	background-image: url(../images/thelumineersdarkgreen.jpg);
 	background-repeat: no-repeat;
 	min-height: 929px;
 	color: white;

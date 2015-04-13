@@ -45,7 +45,7 @@ $statement = $gateway->getRegions($sortOrder);
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
-        <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/924d95fa7611519367e59af1577475fb/favicon.ico" />
 
         <script src="js/respond.js"></script>
         <script src="js/region.js"></script>
@@ -153,7 +153,7 @@ $statement = $gateway->getRegions($sortOrder);
                         $username = $_SESSION ['username'];
                         echo '<p class="greetings">Logged in as : ' . $username . '</p>';
                         ?>
-                        <li><h2 class="scribble">Quicktips :</h2></li>
+                        <li><h2 class="normalfont">Quicktips :</h2></li>
                         <li><a><img src="images/icons/svg/create.svg" class="adminoptionicons"> Create</a></li>
                         <li><a><img src="images/icons/svg/view.svg" class="adminoptionicons"> View</a></li>
                         <li><a><img src="images/icons/svg/edit.svg" class="adminoptionicons"> Edit</a></li>
@@ -240,7 +240,7 @@ $statement = $gateway->getRegions($sortOrder);
                                             echo '<td>' . $row['phonenumber'] . '</td>';
                                             echo '<td>' . $row['email'] . '</td>';
                                             echo '<td>'
-                                            . '<a href="viewRegion.php?id=' . $row['regionnumber'] . '"><button span class = "glyphicon glyphicon-search btn btn-view"></span></button></a> '
+                                            . '<a href="viewRegion.php?id=' . $row['regionnumber'] . '"><button span class = "glyphicon glyphicon-zoom-in btn btn-view"></span></button></a> '
                                             . '<a href="editRegionForm.php?id=' . $row['regionnumber'] . '"><button span class = "glyphicon glyphicon-cog btn btn-edit"></span></button></a> '
                                             . '<a class="deleteRegion" href="deleteRegion.php?id=' . $row['regionnumber'] . '"><button span class = "glyphicon glyphicon-remove btn btn-delete"></span></button></a> '
                                             . '</td>';

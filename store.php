@@ -11,7 +11,7 @@
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
-        <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/924d95fa7611519367e59af1577475fb/favicon.ico" />
 
         <script src="js/respond.js"></script>
     </head>
@@ -91,7 +91,7 @@
         <div class="container departments">
             <div class="row">
                 <div class="container">
-                    <h1>Departments</h1>
+                    <h1 class="normalfont">Departments</h1>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 
@@ -134,7 +134,7 @@
         <div class="container seasonal">
             <div class="row">
                 <div class="container">
-                    <h1>Seasonal</h1>
+                    <h1 class="normalfont">Seasonal</h1>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                     <div class="thumbnail noborder">

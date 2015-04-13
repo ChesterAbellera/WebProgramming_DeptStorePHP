@@ -48,7 +48,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
         <!-- Favicon Icon Link -->
-        <link rel="icon" type="image/x-icon" href="images/threadless_favicon.ico">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/924d95fa7611519367e59af1577475fb/favicon.ico" />
 
         <script src="js/respond.js"></script>
     </head>
@@ -121,7 +121,6 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     <h1>What are you rocking next this coming Spring?</h1>
                     <a class="a.btn btn-info btn-lg">Shop Now</a>
                 </div>
-
             </div>
         </div>
 
@@ -140,7 +139,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
         
         <!-- Popular Apparel Section -->
         <div class="container popular">
-            <h1>What's Popular</h1>
+            <h1 class="normalfont">What's Popular</h1>
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
                     <div class="thumbnail noborder">
@@ -204,7 +203,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 	
         <!-- New Apparel Section -->
         <div class="container new">
-            <h1>What's New</h1>
+            <h1 class="normalfont">What's New</h1>
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
@@ -273,7 +272,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 
         <!-- Photography Items Section -->
         <div class="container popular">
-            <h1>What's Popular</h1>
+            <h1 class="normalfont">What's Popular</h1>
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                     <div class="thumbnail noborder">
@@ -311,7 +310,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     </div>
                 </div>
             </div>
-            <h1>What's New</h1>
+            <h1 class="normalfont">What's New</h1>
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                     <div class="thumbnail noborder">
@@ -363,7 +362,7 @@ $statement = $gateway->getShops($sortOrder, $filterName);
 
         <!-- Travel Items Section -->
         <div class="container popular">
-            <h1>What's New</h1>
+            <h1 class="normalfont">What's New</h1>
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
@@ -505,44 +504,44 @@ $statement = $gateway->getShops($sortOrder, $filterName);
         <div class="container">
             <div class="row">
                 <div class="container crew">
-                    <h1>The Crew</h1>
+                    <h1 class="normalfont">The Crew</h1>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
                         <a href="#courtney" data-toggle="modal"><img src="images/crew/courtney1.jpg" class="img img-circle img-responsive polaroid-grid-4 crewicon"></a>
                         <a href="#courtney" data-toggle="modal"><h2 class="scribble text-center crewname">Courtney Andrews</h2></a>
                         <div class="polaroid-grid-3">
                             <p class="caption">
-                                Have a chance to catch one of our <b>Meet & Greets</b> recently?
-                                <b>Courtney</b> organises our monthly meetups! When she isn't preoccupied with that,
+                                Have a chance to catch one of our Meet & Greets recently?
+                                Courtney organises our monthly meetups! When she isn't preoccupied with that,
                                 she's an avid traveller, photographer and a natural-born crafter.
                             </p>
                         </div>
                     </div>
                 </div>
 			
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
                         <a href="#brea" data-toggle="modal"><img src="images/crew/brea1.jpg" class="img img-circle img-responsive polaroid-grid-4 crewicon"></a>
                         <a href="#brea" data-toggle="modal"><h2 class="scribble text-center crewname">Brea Grant</h2></a>
                         <div class="polaroid-grid-3">
                             <p class="caption">
-                                Got a <b>Local Colour</b> Design or Print that you hold close to your heart? 
-                                Chances are that <b>Brea</b> drew up the sketches and markups for them! 
+                                Got a Local Colour Design or Print that you hold close to your heart? 
+                                Chances are that Brea drew up the sketches and markups for them! 
                                 She's our resident brainstormer, daydreamer, and scribbler/doodler.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <div class="thumbnail noborder">
                         <a href="#zac" data-toggle="modal"><img src="images/crew/zac1.jpg" class="img img-circle img-responsive polaroid-grid-4 crewicon"></a>
                         <a href="#zac" data-toggle="modal"><h2 class="scribble text-center crewname">Zac Farro</h2></a>
                         <div class="polaroid-grid-3">
                             <p class="caption">
-                                <b>Zac</b>'s persnickety approach keeps the <b>Local Colour</b> 
+                                Zac's persnickety approach keeps the Local Colour
                                 orders organized and the space super tidy. 
                                 When he’s not wrapped up in scheduling delivery orders, 
                                 he is always willing to lend a hand with the reprint requests.
@@ -551,16 +550,15 @@ $statement = $gateway->getShops($sortOrder, $filterName);
                     </div>
                 </div>
 			
-                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-6">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="thumbnail noborder">
                         <div class="polaroid-grid-3">
-                            <h1 class="caption meetthecrewheading">Local Colour</h1>
-                            <p class="caption">
-                                is made up of more than just <b>Courtney</b>'s captive eye for detail, 
-                                <b>Brea</b>'s spontaneous doodles and sketches and <b>Zac</b>'s OCD when it comes to delivery orders and schedules,
+                            <hr class="crew_hr">
+                            <p class="caption meetthecrewheading">
+                                Local Colour is made up of more than just Courtney, Brea and Zac,
                                 it is also made up of an amazing family / crew / community of designers, crafters, photographers, bloggers and more!
                             </p>
-                            <p class="caption">Head over to the <b>About</b> page and meet the rest of the <b>Local Colour</b> Crew!</p>
+                            <p class="caption text-center">Head over to the <b>About</b> page and meet the rest of the <b>Local Colour</b> Crew!</p>
                         </div>
                     </div>
                 </div>
